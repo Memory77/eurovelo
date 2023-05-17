@@ -1,1 +1,71 @@
-/*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: "futiger";
+  src: url("../../fonts/Frutiger.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "futiger";
+  src: url("../../fonts/Frutiger_bold.ttf");
+  font-weight: bold;
+}
+body {
+  font-family: "futiger", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
+}
+header .nav-bottom {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+header .nav-bottom p {
+  padding: 0 15px;
+  font-size: 20px;
+}
+header nav {
+  background-color: white;
+  display: flex;
+  text-decoration: none;
+  display: flex;
+  padding: 0 20px;
+}
+header nav img {
+  width: 4%;
+}
+header nav ul {
+  display: flex;
+  padding-top: 20px;
+  padding: 0 60px;
+}
+header nav ul li {
+  list-style: none;
+  padding: 0 20px;
+  font-weight: bold;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  font-weight: bold;
+}
+header nav .search-icon {
+  padding-left: 500px;
+  width: 2%;
+}
+
+#accueil {
+  height: 400vh;
+}
+#accueil #vitrine {
+  background-image: url("../../images/eurovelo-img1.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}/*# sourceMappingURL=main.css.map */
