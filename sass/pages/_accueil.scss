@@ -7,11 +7,56 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 70vh;
+        height: 80vh;
+
+        .vitrine-content{
+            text-align: center;
+            padding-top: 300px;
+            color: white;
+            h1{
+                font-size: 50px;
+            }
+            h2{
+                font-size: 35px;
+                padding-bottom: 35px;
+            }
+            form{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 30px;
+
+                input{
+                    border-radius: 6px;
+                }
+                .btn{
+                    border: 2px solid white;
+                    border-radius: 6px;
+                    padding: 10px 15px;
+                    background-color: rgb(78, 203, 237);
+                    color: white;
+                }
+            }
+        }
     }
 
+    #temoignages{
+        background-image: url('../../images/eurovelo-img2.png');
+        width: 100%;
+        height: 50vh;
+    }
 }
 
 
 
+#formulaire{
+    background-color: aqua;
+    width: 40%;
+    margin: auto;
+    border-radius: 6px;
 
+    select, input{
+        width: 50%;
+
+    };
+}
