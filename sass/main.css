@@ -96,7 +96,12 @@ header nav ul li a {
 #accueil #temoignages {
   background-image: url("../../images/eurovelo-img2.png");
   width: 100%;
-  height: 50vh;
+  height: 60vh;
+}
+#accueil #temoignages .temoignages-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 60vh;
 }
 
 #formulaire {
