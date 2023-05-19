@@ -1,31 +1,78 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "futiger";
   src: url("../../fonts/Frutiger.ttf");
   font-weight: normal;
 }
+
 @font-face {
   font-family: "futiger";
   src: url("../../fonts/Frutiger_bold.ttf");
   font-weight: bold;
 }
+
 body {
   font-family: "futiger", sans-serif;
+}
+
+.btn-general {
+  border-color: #fff;
+  border-width: 2px;
+  border-radius: 0;
+  padding: 12px 26px 12px 26px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 2px solid white;
+}
+
+.btn-white {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+  background-color: #fff;
+  color: #41464b;
+}
+
+.btn-blue {
+  border-color: #34c6d3;
+  color: #34c6d3;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+  background-color: #34c6d3;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
   width: 100%;
   height: 15vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
-header .nav-bottom {
+
+header .nav-top {
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-header .nav-bottom p {
+
+header .nav-top p {
   padding: 0 15px;
   font-size: 20px;
 }
+
 header nav {
   background-color: white;
   display: flex;
@@ -33,19 +80,23 @@ header nav {
   display: flex;
   padding: 0 20px;
 }
+
 header nav img {
   width: 4%;
 }
+
 header nav ul {
   display: flex;
   padding-top: 20px;
   padding: 0 60px;
 }
+
 header nav ul li {
   list-style: none;
   padding: 0 20px;
   font-weight: bold;
 }
+
 header nav ul li a {
   text-decoration: none;
   color: black;
@@ -57,6 +108,7 @@ header nav ul li a {
 #accueil {
   height: 400vh;
 }
+
 #accueil #vitrine {
   background-image: url("../../images/eurovelo-img1.png");
   background-attachment: fixed;
@@ -65,27 +117,33 @@ header nav ul li a {
   background-size: cover;
   height: 80vh;
 }
+
 #accueil #vitrine .vitrine-content {
   text-align: center;
   padding-top: 300px;
   color: white;
 }
+
 #accueil #vitrine .vitrine-content h1 {
   font-size: 50px;
 }
+
 #accueil #vitrine .vitrine-content h2 {
   font-size: 35px;
   padding-bottom: 35px;
 }
+
 #accueil #vitrine .vitrine-content form {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 30px;
 }
+
 #accueil #vitrine .vitrine-content form input {
   border-radius: 6px;
 }
+
 #accueil #vitrine .vitrine-content form .btn {
   border: 2px solid white;
   border-radius: 6px;
@@ -93,15 +151,40 @@ header nav ul li a {
   background-color: rgb(78, 203, 237);
   color: white;
 }
+
 #accueil #temoignages {
   background-image: url("../../images/eurovelo-img2.png");
   width: 100%;
-  height: 60vh;
+  height: 55vh;
 }
-#accueil #temoignages .temoignages-content {
-  background-color: rgba(0, 0, 0, 0.7);
+
+#accueil #temoignages h1 {
+  color: white;
+  padding-top: 10px;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#accueil #temoignages #temoignage-cover {
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 60vh;
+  height: 55vh;
+  text-align: center;
+}
+
+#accueil #temoignages .temoignages-content {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 90px;
+  gap: 50px;
+}
+
+#accueil #temoignages .temoignages-content img {
+  border-radius: 10px;
 }
 
 #formulaire {
@@ -110,8 +193,44 @@ header nav ul li a {
   margin: auto;
   border-radius: 6px;
 }
-#formulaire select, #formulaire input {
+
+#formulaire select,
+#formulaire input {
   width: 50%;
+}
+
+/* carousel temoignage */
+.carousel {
+  width: 300px;
+  /* Ajustez la largeur selon vos besoins */
+  overflow: hidden;
+  /* Masque le contenu dépassant de la zone du carrousel */
+  position: relative;
+  /* Assurez-vous que le carousel a une position relative */
+  z-index: 999;
+}
+
+.carousel img {
+  width: 100%;
+  /* Ajustez la taille des images selon vos besoins */
+  height: auto;
+}
+
+.carousel img {
+  animation: carousel-animation 10s linear infinite;
+  /* Durée et type d'animation */
+}
+
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0);
+    /* Démarre depuis la position initiale */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* Se déplace vers la gauche */
+  }
 }
 
 #map {
@@ -129,48 +248,58 @@ header nav ul li a {
   left: 0;
   overflow: hidden;
 }
+
 .itinerairesList .miniHeader {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
+
 .itinerairesList .miniHeader a {
   text-decoration: none;
   color: black;
   padding: 30px;
 }
+
 .itinerairesList .planifierItineraire {
   padding: 1px 30px 20px;
   background-color: rgb(93, 23, 233);
 }
+
 .itinerairesList .planifierItineraire .planifier {
   color: white;
   font-size: 20px;
   font-weight: 700;
 }
+
 .itinerairesList .planifierItineraire .etapesForm {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
+
 .itinerairesList .telechargerGPX {
   text-align: center;
   padding: 10px;
   color: rgb(66, 183, 247);
 }
+
 .itinerairesList .ficheItineraire {
   margin: 0;
   display: flex;
   flex-flow: row nowrap;
 }
+
 .itinerairesList .ficheItineraire .CaRemplaceUneImage {
   width: 250px;
   height: 250px;
   background-color: green;
 }
+
 .itinerairesList .ficheItineraire .ficheTexte {
   width: 1fr;
 }
+
 .itinerairesList .ficheItineraire .ficheTexte .typeItineraire {
   background-color: orange;
   height: 20px;
@@ -179,6 +308,7 @@ header nav ul li a {
   color: white;
   font-size: 18px;
 }
+
 .itinerairesList .ficheItineraire .ficheTexte .difficulte {
   color: blue;
 }
@@ -193,12 +323,14 @@ Flaticon icon font: Flaticon
   font-weight: normal;
   font-style: normal;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Flaticon";
     src: url("./Flaticon.svg#Flaticon") format("svg");
   }
 }
+
 [class^=flaticon-],
 [class*=" flaticon-"],
 [class^=flaticon-],
@@ -441,7 +573,9 @@ Flaticon icon font: Flaticon
   font-weight: normal;
   font-style: normal;
 }
-[class^=ti-], [class*=" ti-"] {
+
+[class^=ti-],
+[class*=" ti-"] {
   font-family: "themify";
   font-style: normal;
   font-weight: normal;
@@ -1859,4 +1993,6 @@ Flaticon icon font: Flaticon
 
 .ti-rss-alt:before {
   content: "\e75f";
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
