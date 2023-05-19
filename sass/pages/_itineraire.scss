@@ -1,0 +1,82 @@
+#map {
+    height: 84vh;
+    min-width: 50%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.itinerairesList {
+    height: 84vh;
+    min-width: 50%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+
+    .miniHeader {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 30px;
+        }
+    }
+
+    .planifierItineraire {
+        padding: 1px 30px 20px;
+        background-color: rgb(93, 23, 233);
+
+        .planifier {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .etapesForm {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+
+    }
+
+    .telechargerGPX {
+        text-align: center;
+        padding: 10px;
+        color: rgb(66, 183, 247);
+    }
+
+    .ficheItineraire {
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+
+        .CaRemplaceUneImage {
+            width: 250px;
+            height: 250px;
+            background-color: green;
+        }
+
+        .ficheTexte {
+            width: 1fr;
+            .typeItineraire {
+                background-color: orange;
+                height: 20px;
+                width: 65%;
+                padding: 10px;
+                color: white;
+                font-size: 18px;
+            }
+
+            .difficulte {
+                color: blue;
+            }
+        }
+
+
+    }
+
+}

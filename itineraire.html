@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,17 +10,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
 </head>
+
 <body>
-    
-<div id="map" style="height: 700px;"></div>
+    <header>
+        <div class="nav-bottom">
+            <p>Carnet de voyage</p>
+            <p>Espace personnel</p>
+        </div>
+        <nav>
+            <img src="images/logo_Via_Romeo.png" alt="logo">
+            <ul>
+                <li><a href="">L'ITINERAIRE</a></li>
+                <li><a href="">INFOS PRATIQUE</a></li>
+                <li><a href="">A DECOUVRIR</a></li>
+                <li><a href="">IDEES PARCOURS</a></li>
+                <li><a href="">VELOS ET TRANSPORTS</a></li>
+            </ul>
+            <span class="ti-zoom-in"></span>
+        </nav>
+    </header>
+
+    <div class="itinerairesList">
+        <div class="miniHeader">
+            <a href="#">LES ETAPES</a>
+            <a href="#">MON GPS</a>
+        </div>
+        <div class="planifierItineraire">
+            <p class="planifier">Planifier un itinéraire sur cette véloroute</p><br>
+            <div class="etapesForm"><select class="etape" name="" id="">
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                </select>
+                <select class="etape" name="" id="">
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                </select>
+                <input type="submit">
+            </div>
+        </div>
+        <p class="telechargerGPX">TELECHARGER LE .GPX DE LA VELOMARITIME / EUROVELO 5</p>
+        <figure class="ficheItineraire">
+            <!-- <img src="#" alt="illustration"> -->
+            <div class="CaRemplaceUneImage"></div>
+            <div class="ficheTexte">
+                <p class="typeItineraire">Nature, Patrimoine</p>
+                <p class="difficulte">J'ai l'habitude</p>
+            </div>
+        </figure>
+    </div>
+
+    <div id="map"></div>
 
 
 
-<script>
-    
-    map = L.map(map).setView([46.603354, 1.888334], 6); // Initialiser avec une vue par défaut
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-</script>
+    <script>
+
+        map = L.map(map).setView([46.603354, 1.888334], 6); // Initialiser avec une vue par défaut
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    </script>
 
 
 
@@ -27,4 +83,5 @@
 
 
 </body>
+
 </html>

@@ -114,6 +114,75 @@ header nav ul li a {
   width: 50%;
 }
 
+#map {
+  height: 84vh;
+  min-width: 50%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.itinerairesList {
+  height: 84vh;
+  min-width: 50%;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+.itinerairesList .miniHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.itinerairesList .miniHeader a {
+  text-decoration: none;
+  color: black;
+  padding: 30px;
+}
+.itinerairesList .planifierItineraire {
+  padding: 1px 30px 20px;
+  background-color: rgb(93, 23, 233);
+}
+.itinerairesList .planifierItineraire .planifier {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+.itinerairesList .planifierItineraire .etapesForm {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.itinerairesList .telechargerGPX {
+  text-align: center;
+  padding: 10px;
+  color: rgb(66, 183, 247);
+}
+.itinerairesList .ficheItineraire {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.itinerairesList .ficheItineraire .CaRemplaceUneImage {
+  width: 250px;
+  height: 250px;
+  background-color: green;
+}
+.itinerairesList .ficheItineraire .ficheTexte {
+  width: 1fr;
+}
+.itinerairesList .ficheItineraire .ficheTexte .typeItineraire {
+  background-color: orange;
+  height: 20px;
+  width: 65%;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.itinerairesList .ficheItineraire .ficheTexte .difficulte {
+  color: blue;
+}
+
 /*
 Flaticon icon font: Flaticon
 */
