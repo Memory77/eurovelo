@@ -130,3 +130,92 @@
   }
 
  
+  /* avis */
+  #avis{
+
+    #avis-title{
+        text-align: center;
+        margin: 5% 30%;
+
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 22px;
+        }
+        
+    }
+
+    #avis-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    
+        .avis-content-box{
+        width: 30%;
+        background-color: rgb(230, 230, 230);
+        border-radius: 10px;
+        padding: 10px;
+
+            .name{
+                font-weight: bold;
+                font-size: 25px;
+            }
+
+            .provenance{
+                padding: 10px;
+                background-color: orange;
+                width: inherit;
+            }
+
+            .notes{
+                display: flex;
+                gap: 100px;
+            }
+        }
+
+
+
+  }
+
+
+
+  }
+
+
+  /* rejoindre */
+  #rejoindre{
+
+    #rejoindre-title{
+        text-align: center;
+        margin: 5% 30%;
+
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 22px;
+        }
+    }
+
+    #rejoindre_grid{
+        display: grid;
+        
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 30px;
+        margin-left: 10%;
+
+        .item{
+
+            img{
+                width: 70%;
+                position: relative;
+            }
+
+            p{
+                position: absolute;
+            }
+        } 
+    }
+}
