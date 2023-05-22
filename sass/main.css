@@ -263,7 +263,6 @@ header nav ul li a {
   position: absolute;
 }
 
-<<<<<<< HEAD
 .grid {
   display: grid;
   grid-template-columns: 350px 350px;
@@ -280,13 +279,11 @@ header nav ul li a {
   display: flex;
   flex-flow: row nowrap;
   gap: 20px;
-=======
 .listMap {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-rows: 1fr;
   padding-top: 200px;
->>>>>>> 6a77139c04d5536a9b84072efb74efb5b140559d
 }
 
 #map {
