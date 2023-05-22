@@ -1,17 +1,25 @@
+.listMap {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 200px;
+}
+
 #map {
     height: 84vh;
-    min-width: 50%;
+    width: 50%;
     position: absolute;
     right: 0;
     z-index: -1;
+
 }
 
 .itinerairesList {
+    width: 50%;
     height: 84vh;
-    min-width: 50%;
     position: absolute;
-    left: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .miniHeader {
         display: flex;
@@ -41,6 +49,12 @@
             justify-content: space-around;
         }
 
+        .etape, .envoiItineraire {
+            width: 30%;
+            height: 50px;
+        }
+.envoiItineraire{}
+
     }
 
     .telechargerGPX {
@@ -50,9 +64,19 @@
     }
 
     .ficheItineraire {
-        margin: 0;
+        // margin-bottom: 10px;
         display: flex;
         flex-flow: row nowrap;
+        border: 1px rgba(0, 0, 0, 0.418) solid;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: 95%;
+        height: 250px;
+
+
+        // Fausse image
 
         .CaRemplaceUneImage {
             width: 250px;
@@ -61,11 +85,15 @@
         }
 
         .ficheTexte {
-            width: 1fr;
+            position: relative;
+            padding-bottom: 20px;
+
+
+
             .typeItineraire {
                 background-color: orange;
                 height: 20px;
-                width: 65%;
+                width: 75%;
                 padding: 10px;
                 color: white;
                 font-size: 18px;
@@ -73,10 +101,22 @@
 
             .difficulte {
                 color: blue;
+                padding: 5px 50px 0px 30px;
+                font-weight: 550;
+            }
+
+            .titreItineraire {
+                padding-left: 10px;
+            }
+
+            .descriptionItineraire {
+                width: 100%;
+                bottom: 0;
+                padding: 0px 20px 0px 10px;
+                font-size: 20px;
+                line-height: 30px;
+                font-size: 700;
             }
         }
-
-
     }
-
 }
