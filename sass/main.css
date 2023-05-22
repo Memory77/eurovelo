@@ -286,6 +286,15 @@ header nav ul li a {
   border-radius: 20px;
 }
 
+.plancontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.intro {
+  text-align: center;
+}
+
 .listMap {
   display: grid;
   grid-template-rows: 1fr 1fr;
