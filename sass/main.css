@@ -281,6 +281,23 @@ header nav ul li a {
   gap: 20px;
 }
 
+<<<<<<< HEAD
+=======
+.plan {
+  width: 65%;
+  border-radius: 20px;
+}
+
+.plancontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.intro {
+  text-align: center;
+}
+
+>>>>>>> 442c2828f3bcee65a98a5b106bb89d218ef209f8
 .listMap {
   display: grid;
   grid-template-rows: 1fr 1fr;
