@@ -31,6 +31,16 @@
     background-color: #34c6d3;
     color: #fff;
 }
+.btn-black{
+    background-color: black;
+    color: white;
+    transition: .5s ease;
+}
+.btn-black:hover,
+.btn-black:focus {
+    background-color: #fff;
+    color: #41464b;
+}
 
 a{
     text-decoration: none;

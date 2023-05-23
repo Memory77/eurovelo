@@ -87,17 +87,41 @@
 }
 
 
+
+
+/* formulaire*/
+
+
+
+
 #formulaire{
-    background-color: aqua;
+    background-color: rgb(4, 208, 208);
     width: 40%;
     margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
     border-radius: 6px;
+    height: 33vh;
+    text-align: center;
+    box-shadow: 10px 5px 5px rgb(96, 84, 84);
+    
+    
 
     select, input{
-        width: 50%;
+        width: 90%;
 
-    };
+    }
 }
+h2{
+    color: white;
+    padding-top: 10px;
+}
+
+
+
+
+
+
 
 
 /* carousel */
