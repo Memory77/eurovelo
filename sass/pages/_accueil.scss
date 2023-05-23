@@ -43,7 +43,7 @@
     #temoignages{
         background-image: url('../../images/eurovelo-img2.png');
         width: 100%;
-        height: 55vh;
+        height: 85vh;
         
         h1{
             color: white;
@@ -87,7 +87,6 @@
 }
 
 
-
 #formulaire{
     background-color: aqua;
     width: 40%;
@@ -101,36 +100,41 @@
 }
 
 
+/* carousel */
 
+.temoignages-content{
+    
+        display: flex;
+        overflow-x: scroll;
+        padding: 1rem 0;
+        scroll-snap-type: x mandatory;
+        .temoin-img{
+            
+                margin-left: 1rem;
+                flex-grow: 1;
+                flex-shrink: 0;
+                flex-basis: 450px;
+                margin-left: 1rem;
+                scroll-snap-align: start;
+        }
+}
 
-/* carousel temoignage */
-.carousel {
-    width: 300px; /* Ajustez la largeur selon vos besoins */
-    overflow: hidden; /* Masque le contenu dépassant de la zone du carrousel */
-    position: relative; /* Assurez-vous que le carousel a une position relative */
-    z-index: 999;
-  }
-  
-  .carousel img {
-    width: 100%; /* Ajustez la taille des images selon vos besoins */
-    height: auto;
-  }
-  
-  .carousel img {
-    animation: carousel-animation 10s linear infinite; /* Durée et type d'animation */
-  }
-  
-  @keyframes carousel-animation {
-    0% {
-      transform: translateX(0); /* Démarre depuis la position initiale */
-    }
-    100% {
-      transform: translateX(-100%); /* Se déplace vers la gauche */
-    }
-  }
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
 
+::-webkit-scrollbar {
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3d4852;
+    border-radius: 3px;
+}
  
   /* avis */
+  
   #avis{
 
     #avis-title{
@@ -204,12 +208,12 @@
         
         grid-template-columns: repeat(3,1fr);
         row-gap: 30px;
-        margin-left: 10%;
+        
 
         .item{
 
             img{
-                width: 70%;
+                width: 100%;
                 position: relative;
             }
 
@@ -229,9 +233,11 @@
   }
 
   .imagerow{
-    width: 262.5px;
-    height:350px;
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
   }
+  
 .row1{
     display: flex;
     flex-flow: row nowrap;
