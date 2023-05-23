@@ -391,10 +391,10 @@ h2 {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 350px 350px;
-  justify-content: space-around;
-  padding-bottom: 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-bottom: 100px;
 }
 
 .imagerow {
