@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "futiger";
   src: url("../../fonts/Frutiger.ttf");
@@ -147,9 +148,9 @@ header nav ul li a {
   color: white;
 }
 #accueil #temoignages {
-  background-image: url("../../images/eurovelo-img2.png");
+  background-image: url("../../images/49595267696_3e61c2eb17_k.jpg");
   width: 100%;
-  height: 85vh;
+  height: 70vh;
 }
 #accueil #temoignages h1 {
   color: white;
@@ -157,11 +158,18 @@ header nav ul li a {
   font-size: 60px;
   text-transform: uppercase;
   font-weight: bold;
+  padding-top: 30px;
+}
+#accueil #temoignages p {
+  color: white;
+  width: 40%;
+  margin: auto;
+  padding-bottom: 40px;
 }
 #accueil #temoignages #temoignage-cover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 55vh;
+  height: 100%;
   text-align: center;
 }
 #accueil #temoignages .temoignages-content {
@@ -189,7 +197,8 @@ header nav ul li a {
   text-align: center;
   box-shadow: 10px 5px 5px rgb(96, 84, 84);
 }
-#formulaire select, #formulaire input {
+#formulaire select,
+#formulaire input {
   width: 90%;
 }
 
@@ -199,35 +208,32 @@ h2 {
 }
 
 /* carousel */
-.temoignages-content {
-  display: flex;
-  overflow-x: scroll;
-  padding: 1rem 0;
-  scroll-snap-type: x mandatory;
-}
-.temoignages-content .temoin-img {
-  margin-left: 1rem;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 450px;
-  margin-left: 1rem;
-  scroll-snap-align: start;
+/* scroll bar a mettre pour le responsive */
+/* carousel temoignage */
+.carousel {
+  width: 300px; /* Ajustez la largeur selon vos besoins */
+  overflow: hidden; /* Masque le contenu dépassant de la zone du carrousel */
+  position: relative; /* Assurez-vous que le carousel a une position relative */
+  z-index: 999;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
+.carousel img {
+  width: 100%; /* Ajustez la taille des images selon vos besoins */
+  height: auto;
 }
 
-::-webkit-scrollbar {
-  height: 6px;
-  background-color: #F5F5F5;
+.carousel img {
+  animation: carousel-animation 10s linear infinite; /* Durée et type d'animation */
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #3d4852;
-  border-radius: 3px;
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0); /* Démarre depuis la position initiale */
+  }
+  100% {
+    transform: translateX(-100%); /* Se déplace vers la gauche */
+  }
 }
-
 /* avis */
 #avis #avis-title {
   text-align: center;
@@ -246,7 +252,8 @@ h2 {
   gap: 20px;
 }
 #avis #avis-box .avis-content-box {
-  width: 30%;
+  width: 400px;
+  height: 375px;
   background-color: rgb(230, 230, 230);
   border-radius: 10px;
   padding: 10px;
@@ -258,11 +265,12 @@ h2 {
 #avis #avis-box .avis-content-box .provenance {
   padding: 10px;
   background-color: orange;
-  width: inherit;
+  color: white;
+  width: 250px;
 }
 #avis #avis-box .avis-content-box .notes {
   display: flex;
-  gap: 100px;
+  justify-content: space-around;
 }
 
 /* rejoindre */
@@ -277,16 +285,60 @@ h2 {
   font-size: 22px;
 }
 #rejoindre #rejoindre_grid {
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 30px;
+  grid-template-rows: repeat(3, 400px);
+  grid-template-columns: repeat(3, 400px);
+  gap: 30px;
+  padding-bottom: 100px;
+}
+#rejoindre #rejoindre_grid .item {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 #rejoindre #rejoindre_grid .item img {
-  width: 100%;
-  position: relative;
+  height: 400px;
+  transition: 0.2s ease;
+}
+#rejoindre #rejoindre_grid .item p,
+#rejoindre #rejoindre_grid .item a {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: white;
+  text-align: center;
+}
+#rejoindre #rejoindre_grid .item a {
+  top: 5%;
+  background-color: orange;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 10px;
+  width: 50%;
+  transition: 0.2s ease;
+}
+#rejoindre #rejoindre_grid .item a:hover {
+  background-color: white;
+  color: orange;
 }
 #rejoindre #rejoindre_grid .item p {
-  position: absolute;
+  font-size: 30px;
+  bottom: 5%;
+  width: 80%;
+  transition: 0.2s ease;
+}
+#rejoindre #rejoindre_grid .item:hover p {
+  bottom: 20%;
+}
+#rejoindre #rejoindre_grid .item:hover img {
+  height: 450px;
+  filter: blur(7px);
 }
 
 .grid {
