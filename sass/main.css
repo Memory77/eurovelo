@@ -189,7 +189,8 @@ header nav ul li a {
   text-align: center;
   box-shadow: 10px 5px 5px rgb(96, 84, 84);
 }
-#formulaire select, #formulaire input {
+#formulaire select,
+#formulaire input {
   width: 90%;
 }
 
@@ -246,7 +247,8 @@ h2 {
   gap: 20px;
 }
 #avis #avis-box .avis-content-box {
-  width: 30%;
+  width: 400px;
+  height: 375px;
   background-color: rgb(230, 230, 230);
   border-radius: 10px;
   padding: 10px;
@@ -258,11 +260,12 @@ h2 {
 #avis #avis-box .avis-content-box .provenance {
   padding: 10px;
   background-color: orange;
-  width: inherit;
+  color: white;
+  width: 250px;
 }
 #avis #avis-box .avis-content-box .notes {
   display: flex;
-  gap: 100px;
+  justify-content: space-around;
 }
 
 /* rejoindre */
@@ -307,7 +310,7 @@ h2 {
   text-align: center;
 }
 #rejoindre #rejoindre_grid .item a {
-  top: 10%;
+  top: 5%;
   background-color: orange;
   font-weight: 700;
   font-size: 17px;

@@ -99,7 +99,7 @@
 
 
 
-#formulaire{
+#formulaire {
     background-color: rgb(4, 208, 208);
     width: 40%;
     margin: auto;
@@ -109,15 +109,17 @@
     height: 33vh;
     text-align: center;
     box-shadow: 10px 5px 5px rgb(96, 84, 84);
-    
-    
 
-    select, input{
+
+
+    select,
+    input {
         width: 90%;
 
     }
 }
-h2{
+
+h2 {
     color: white;
     padding-top: 10px;
 }
@@ -188,7 +190,8 @@ h2{
         gap: 20px;
 
         .avis-content-box {
-            width: 30%;
+            width: 400px;
+            height: 375px;
             background-color: rgb(230, 230, 230);
             border-radius: 10px;
             padding: 10px;
@@ -201,21 +204,16 @@ h2{
             .provenance {
                 padding: 10px;
                 background-color: orange;
-                width: inherit;
+                color: white;
+                width: 250px;
             }
 
             .notes {
                 display: flex;
-                gap: 100px;
+                justify-content: space-around;
             }
         }
-
-
-
     }
-
-
-
 }
 
 
@@ -272,7 +270,7 @@ h2{
             }
 
             a {
-                top: 10%;
+                top: 5%;
                 background-color: orange;
                 font-weight: 700;
                 font-size: 17px;
