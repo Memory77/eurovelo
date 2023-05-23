@@ -281,8 +281,6 @@ header nav ul li a {
   gap: 20px;
 }
 
-<<<<<<< HEAD
-=======
 .plan {
   width: 65%;
   border-radius: 20px;
@@ -297,15 +295,14 @@ header nav ul li a {
   text-align: center;
 }
 
->>>>>>> 442c2828f3bcee65a98a5b106bb89d218ef209f8
 .listMap {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-rows: 1fr;
-  padding-top: 200px;
 }
 
 #map {
+  bottom: 0;
   height: 84vh;
   width: 50%;
   position: absolute;
@@ -314,6 +311,7 @@ header nav ul li a {
 }
 
 .itinerairesList {
+  bottom: 0;
   width: 50%;
   height: 84vh;
   position: absolute;
@@ -321,6 +319,7 @@ header nav ul li a {
   overflow-x: hidden;
 }
 .itinerairesList .miniHeader {
+  background-color: white;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -329,6 +328,7 @@ header nav ul li a {
   text-decoration: none;
   color: black;
   padding: 30px;
+  font-weight: 600;
 }
 .itinerairesList .miniHeader .activeItineraire {
   color: rgb(93, 23, 233);
@@ -357,6 +357,12 @@ header nav ul li a {
   background-color: rgb(93, 23, 233);
   border: 3px solid white;
   color: white;
+  font-weight: 700;
+  transition: 0.2s ease-in;
+}
+.itinerairesList .planifierItineraire .envoiItineraire:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(93, 23, 233);
 }
 .itinerairesList .telechargerGPX {
   text-align: center;

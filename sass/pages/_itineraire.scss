@@ -2,10 +2,10 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-rows: 1fr;
-    padding-top: 200px;
 }
 
 #map {
+    bottom: 0;
     height: 84vh;
     width: 50%;
     position: absolute;
@@ -15,6 +15,7 @@
 }
 
 .itinerairesList {
+    bottom: 0;
     width: 50%;
     height: 84vh;
     position: absolute;
@@ -22,6 +23,7 @@
     overflow-x: hidden;
 
     .miniHeader {
+        background-color: white;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
@@ -30,6 +32,7 @@
             text-decoration: none;
             color: black;
             padding: 30px;
+            font-weight: 600;
         }
 
         .activeItineraire {
@@ -65,10 +68,18 @@
             background-color: rgb(93, 23, 233);
             border: 3px solid white;
             color: white;
+            font-weight: 700;
+            transition: .2s ease-in;
+        }
+
+        .envoiItineraire:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(93, 23, 233);
         }
 
 
     }
+
 
     .telechargerGPX {
         text-align: center;
@@ -121,7 +132,10 @@
             .simple {
                 color: blue;
             }
-            .difficile {color: red;}
+
+            .difficile {
+                color: red;
+            }
 
             .titreItineraire {
                 padding-left: 10px;
