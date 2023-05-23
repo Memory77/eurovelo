@@ -117,7 +117,7 @@ footer {
   justify-content: center;
   gap: 40px;
 }
-footer p {
+footer p, footer h2 {
   color: white;
 }
 
