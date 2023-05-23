@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "futiger";
   src: url("../../fonts/Frutiger.ttf");
@@ -138,7 +137,7 @@ header nav ul li a {
 #accueil #temoignages {
   background-image: url("../../images/eurovelo-img2.png");
   width: 100%;
-  height: 55vh;
+  height: 85vh;
 }
 #accueil #temoignages h1 {
   color: white;
@@ -176,31 +175,36 @@ header nav ul li a {
   width: 50%;
 }
 
-/* carousel temoignage */
-.carousel {
-  width: 300px; /* Ajustez la largeur selon vos besoins */
-  overflow: hidden; /* Masque le contenu dépassant de la zone du carrousel */
-  position: relative; /* Assurez-vous que le carousel a une position relative */
-  z-index: 999;
+/* carousel */
+.temoignages-content {
+  display: flex;
+  overflow-x: scroll;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+.temoignages-content .temoin-img {
+  margin-left: 1rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 450px;
+  margin-left: 1rem;
+  scroll-snap-align: start;
 }
 
-.carousel img {
-  width: 100%; /* Ajustez la taille des images selon vos besoins */
-  height: auto;
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
 }
 
-.carousel img {
-  animation: carousel-animation 10s linear infinite; /* Durée et type d'animation */
+::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
 }
 
-@keyframes carousel-animation {
-  0% {
-    transform: translateX(0); /* Démarre depuis la position initiale */
-  }
-  100% {
-    transform: translateX(-100%); /* Se déplace vers la gauche */
-  }
+::-webkit-scrollbar-thumb {
+  background-color: #3d4852;
+  border-radius: 3px;
 }
+
 /* avis */
 #avis #avis-title {
   text-align: center;
@@ -253,10 +257,9 @@ header nav ul li a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 30px;
-  margin-left: 10%;
 }
 #rejoindre #rejoindre_grid .item img {
-  width: 70%;
+  width: 100%;
   position: relative;
 }
 #rejoindre #rejoindre_grid .item p {
