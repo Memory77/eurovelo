@@ -46,6 +46,18 @@ body {
   color: #fff;
 }
 
+.btn-black {
+  background-color: black;
+  color: white;
+  transition: 0.5s ease;
+}
+
+.btn-black:hover,
+.btn-black:focus {
+  background-color: #fff;
+  color: #41464b;
+}
+
 a {
   text-decoration: none;
 }
@@ -165,15 +177,25 @@ header nav ul li a {
   border-radius: 10px;
 }
 
+/* formulaire*/
 #formulaire {
-  background-color: aqua;
+  background-color: rgb(4, 208, 208);
   width: 40%;
   margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
   border-radius: 6px;
+  height: 33vh;
+  text-align: center;
+  box-shadow: 10px 5px 5px rgb(96, 84, 84);
 }
-#formulaire select,
-#formulaire input {
-  width: 50%;
+#formulaire select, #formulaire input {
+  width: 90%;
+}
+
+h2 {
+  color: white;
+  padding-top: 10px;
 }
 
 /* carousel */
