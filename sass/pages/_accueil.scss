@@ -77,7 +77,7 @@
 
         .temoignages-content {
 
-            width: 120%;
+            width: 4000px;
             height: 55vh;
             display: flex;
             flex-direction: row;
@@ -238,7 +238,7 @@ h2 {
 
 @keyframes carousel-animation {
     0% {
-        transform: translateX(15%);
+        transform: translateX(0%);
         /* Démarre depuis la position initiale */
     }
 
