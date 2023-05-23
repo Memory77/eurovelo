@@ -402,19 +402,20 @@ h2 {
     margin-left: 50px;
 }
 
-.imagerow {
-    width: 262.5px;
-    height: 350px;
-}
-
-.row1 {
+  .imagerow{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+  }
+  
+.row1{
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
 }
 
-.plan {
-    width: 65%;
+.plan{
+    width:60%;
     border-radius: 20px;
 }
 
@@ -423,6 +424,24 @@ h2 {
     justify-content: center;
 }
 
-.intro {
+.intro{
     text-align: center;
+}
+
+.cyclistes{
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    p{position:absolute;
+        transform: translate(-50%,-50%); 
+        left:50%;
+        top: 50%;
+         color: white;}
+
+}
+
+.cyclistes:hover{
+   img{ filter: blur(5px);}
 }

@@ -108,6 +108,19 @@ header nav ul li a {
   font-weight: bold;
 }
 
+footer {
+  background-color: rgb(200, 199, 199);
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+footer p {
+  color: white;
+}
+
 #accueil {
   height: 400vh;
 }
@@ -381,8 +394,9 @@ h2 {
 }
 
 .imagerow {
-  width: 262.5px;
-  height: 350px;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
 }
 
 .row1 {
@@ -392,7 +406,7 @@ h2 {
 }
 
 .plan {
-  width: 65%;
+  width: 60%;
   border-radius: 20px;
 }
 
@@ -403,6 +417,25 @@ h2 {
 
 .intro {
   text-align: center;
+}
+
+.cyclistes {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+.cyclistes p {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  color: white;
+}
+
+.cyclistes:hover img {
+  filter: blur(5px);
 }
 
 .listMap {
