@@ -184,9 +184,10 @@ footer p {
   width: 100%;
   height: 100%;
   text-align: center;
+  overflow: hidden;
 }
 #accueil #temoignages .temoignages-content {
-  width: 125%;
+  width: 120%;
   height: 55vh;
   display: flex;
   flex-direction: row;
@@ -316,6 +317,9 @@ h2 {
 #avis #avis-box .avis-content-box .notes {
   display: flex;
   justify-content: space-around;
+}
+#avis #avis-box .avis-content-box .commentaire h2 {
+  color: black;
 }
 
 /* rejoindre */
