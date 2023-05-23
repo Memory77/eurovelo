@@ -171,7 +171,8 @@ header nav ul li a {
   margin: auto;
   border-radius: 6px;
 }
-#formulaire select, #formulaire input {
+#formulaire select,
+#formulaire input {
   width: 50%;
 }
 
@@ -254,16 +255,60 @@ header nav ul li a {
   font-size: 22px;
 }
 #rejoindre #rejoindre_grid {
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 30px;
+  grid-template-rows: repeat(3, 400px);
+  grid-template-columns: repeat(3, 400px);
+  gap: 30px;
+  padding-bottom: 100px;
+}
+#rejoindre #rejoindre_grid .item {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 #rejoindre #rejoindre_grid .item img {
-  width: 100%;
-  position: relative;
+  height: 400px;
+  transition: 0.2s ease;
+}
+#rejoindre #rejoindre_grid .item p,
+#rejoindre #rejoindre_grid .item a {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: white;
+  text-align: center;
+}
+#rejoindre #rejoindre_grid .item a {
+  top: 10%;
+  background-color: orange;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 10px;
+  width: 50%;
+  transition: 0.2s ease;
+}
+#rejoindre #rejoindre_grid .item a:hover {
+  background-color: white;
+  color: orange;
 }
 #rejoindre #rejoindre_grid .item p {
-  position: absolute;
+  font-size: 30px;
+  bottom: 5%;
+  width: 80%;
+  transition: 0.2s ease;
+}
+#rejoindre #rejoindre_grid .item:hover p {
+  bottom: 20%;
+}
+#rejoindre #rejoindre_grid .item:hover img {
+  height: 450px;
+  filter: blur(7px);
 }
 
 .grid {
