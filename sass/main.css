@@ -173,7 +173,7 @@ header nav ul li a {
   text-align: center;
 }
 #accueil #temoignages .temoignages-content {
-  width: 100%;
+  width: 125%;
   height: 55vh;
   display: flex;
   flex-direction: row;
@@ -181,8 +181,36 @@ header nav ul li a {
   padding-top: 90px;
   gap: 50px;
 }
-#accueil #temoignages .temoignages-content img {
+#accueil #temoignages .temoignages-content .temoin-img {
+  display: flex;
+  position: relative;
+  height: 300px;
+  width: 450px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
+}
+#accueil #temoignages .temoignages-content .temoin-img img {
+  height: 300px;
+  transition: 0.2s ease;
+}
+#accueil #temoignages .temoignages-content .temoin-img p {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  bottom: 5%;
+  width: 80%;
+  font-size: 25px;
+  left: 50%;
+  transition: 0.2s ease;
+}
+#accueil #temoignages .temoignages-content .temoin-img:hover p {
+  bottom: 20%;
+}
+#accueil #temoignages .temoignages-content .temoin-img:hover img {
+  height: 350px;
+  width: 450px;
+  filter: blur(7px);
 }
 
 /* formulaire*/
@@ -211,27 +239,31 @@ h2 {
 /* scroll bar a mettre pour le responsive */
 /* carousel temoignage */
 .carousel {
-  width: 300px; /* Ajustez la largeur selon vos besoins */
-  overflow: hidden; /* Masque le contenu dépassant de la zone du carrousel */
-  position: relative; /* Assurez-vous que le carousel a une position relative */
+  width: 300px;
+  /* Ajustez la largeur selon vos besoins */
+  overflow: hidden;
+  /* Masque le contenu dépassant de la zone du carrousel */
+  position: relative;
+  /* Assurez-vous que le carousel a une position relative */
   z-index: 999;
+  animation: carousel-animation 30s linear infinite;
+  /* Durée et type d'animation */
 }
 
 .carousel img {
-  width: 100%; /* Ajustez la taille des images selon vos besoins */
+  width: 100%;
+  /* Ajustez la taille des images selon vos besoins */
   height: auto;
-}
-
-.carousel img {
-  animation: carousel-animation 10s linear infinite; /* Durée et type d'animation */
 }
 
 @keyframes carousel-animation {
   0% {
-    transform: translateX(0); /* Démarre depuis la position initiale */
+    transform: translateX(15%);
+    /* Démarre depuis la position initiale */
   }
   100% {
-    transform: translateX(-100%); /* Se déplace vers la gauche */
+    transform: translateX(-90%);
+    /* Se déplace vers la gauche */
   }
 }
 /* avis */
@@ -249,7 +281,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
 }
 #avis #avis-box .avis-content-box {
   width: 400px;
