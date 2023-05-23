@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -32,13 +32,13 @@
     <div class="listMap">
         <div class="itinerairesList">
             <div class="miniHeader">
-                <a href="#">LES ETAPES</a>
+                <a class="activeItineraire" href="#">LES ETAPES</a>
                 <a href="#">MON GPS</a>
             </div>
             <div class="planifierItineraire">
                 <p class="planifier">Planifier un itinéraire sur cette véloroute</p><br>
                 <div class="etapesForm">
-                    <select class="etape" name="" id="">
+                    <select class="etape" name="ItineraireDepart" id="ItineraireDepart">
                         <option value="1">Etape de départ</option>
                         <option value="1">Etape de départ</option>
                         <option value="1">Etape de départ</option>
@@ -48,9 +48,9 @@
                         <option value="1">Etape de départ</option>
                         <option value="1">Etape de départ</option>
                         <option value="1">Etape de départ</option>
-                        
+
                     </select>
-                    <select class="etape" name="" id="">
+                    <select class="etape" name="ItineraireArrivee" id="ItineraireArrivee">
                         <option value="1">Etape d'arrivée</option>
                         <option value="1">Etape d'arrivée</option>
                         <option value="1">Etape d'arrivée</option>
@@ -60,9 +60,9 @@
                         <option value="1">Etape d'arrivée</option>
                         <option value="1">Etape d'arrivée</option>
                         <option value="1">Etape d'arrivée</option>
-                        
+
                     </select>
-                    <input class="envoiItineraire" type="submit">
+                    <input class="envoiItineraire" type="submit" value="PLANIFIER MON ITINERAIRE">
                 </div>
             </div>
             <p class="telechargerGPX">TELECHARGER LE .GPX DE LA VELOMARITIME / EUROVELO 5</p>
@@ -71,7 +71,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte simple">J'ai l'habitude</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -83,7 +83,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte difficile">Je me dépasse</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -95,7 +95,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte simple">J'ai l'habitude</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -107,7 +107,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte simple">J'ai l'habitude</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -119,7 +119,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte difficile">Je me dépasse</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -131,7 +131,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte simple">J'ai l'habitude</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -143,7 +143,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte simple">J'ai l'habitude</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -155,7 +155,7 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte difficile">Je me dépasse</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
@@ -167,25 +167,14 @@
                 <div class="CaRemplaceUneImage"></div>
                 <div class="ficheTexte">
                     <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
+                    <p class="difficulte simple">J'ai l'habitude</p>
                     <h2 class="titreItineraire">Roscoff / Morlaix</h2>
                     <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
                         primeurs. <br> Cette étape vélo de La Vélodyssée est très
                         olfactive et quelle vue plongeante sur la baie !</p>
                 </div>
             </figure>
-            <figure class="ficheItineraire">
-                <!-- <img src="#" alt="illustration"> -->
-                <div class="CaRemplaceUneImage"></div>
-                <div class="ficheTexte">
-                    <p class="typeItineraire">Nature, Patrimoine</p>
-                    <p class="difficulte">J'ai l'habitude</p>
-                    <h2 class="titreItineraire">Roscoff / Morlaix</h2>
-                    <p class="descriptionItineraire">Après le vieux port de Roscoff, vous êtes au cœur des champs de
-                        primeurs. <br> Cette étape vélo de La Vélodyssée est très
-                        olfactive et quelle vue plongeante sur la baie !</p>
-                </div>
-            </figure>
+
         </div>
 
         <div id="map"></div>

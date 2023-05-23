@@ -31,6 +31,11 @@
             color: black;
             padding: 30px;
         }
+
+        .activeItineraire {
+            color: rgb(93, 23, 233);
+            ;
+        }
     }
 
     .planifierItineraire {
@@ -49,11 +54,19 @@
             justify-content: space-around;
         }
 
-        .etape, .envoiItineraire {
+        .etape,
+        .envoiItineraire {
             width: 30%;
             height: 50px;
+            border-radius: 10px;
         }
-.envoiItineraire{}
+
+        .envoiItineraire {
+            background-color: rgb(93, 23, 233);
+            border: 3px solid white;
+            color: white;
+        }
+
 
     }
 
@@ -81,7 +94,8 @@
         .CaRemplaceUneImage {
             width: 250px;
             height: 250px;
-            background-color: green;
+            background-color: rgb(93, 23, 233);
+            ;
         }
 
         .ficheTexte {
@@ -93,17 +107,21 @@
             .typeItineraire {
                 background-color: orange;
                 height: 20px;
-                width: 75%;
+                width: 85%;
                 padding: 10px;
                 color: white;
                 font-size: 18px;
             }
 
             .difficulte {
-                color: blue;
                 padding: 5px 50px 0px 30px;
                 font-weight: 550;
             }
+
+            .simple {
+                color: blue;
+            }
+            .difficile {color: red;}
 
             .titreItineraire {
                 padding-left: 10px;

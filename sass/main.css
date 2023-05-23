@@ -284,6 +284,20 @@ header nav ul li a {
   gap: 20px;
 }
 
+.plan {
+  width: 65%;
+  border-radius: 20px;
+}
+
+.plancontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.intro {
+  text-align: center;
+}
+
 .listMap {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -316,6 +330,9 @@ header nav ul li a {
   color: black;
   padding: 30px;
 }
+.itinerairesList .miniHeader .activeItineraire {
+  color: rgb(93, 23, 233);
+}
 .itinerairesList .planifierItineraire {
   padding: 1px 30px 20px;
   background-color: rgb(93, 23, 233);
@@ -330,9 +347,16 @@ header nav ul li a {
   flex-flow: row nowrap;
   justify-content: space-around;
 }
-.itinerairesList .planifierItineraire .etape, .itinerairesList .planifierItineraire .envoiItineraire {
+.itinerairesList .planifierItineraire .etape,
+.itinerairesList .planifierItineraire .envoiItineraire {
   width: 30%;
   height: 50px;
+  border-radius: 10px;
+}
+.itinerairesList .planifierItineraire .envoiItineraire {
+  background-color: rgb(93, 23, 233);
+  border: 3px solid white;
+  color: white;
 }
 .itinerairesList .telechargerGPX {
   text-align: center;
@@ -353,7 +377,7 @@ header nav ul li a {
 .itinerairesList .ficheItineraire .CaRemplaceUneImage {
   width: 250px;
   height: 250px;
-  background-color: green;
+  background-color: rgb(93, 23, 233);
 }
 .itinerairesList .ficheItineraire .ficheTexte {
   position: relative;
@@ -362,15 +386,20 @@ header nav ul li a {
 .itinerairesList .ficheItineraire .ficheTexte .typeItineraire {
   background-color: orange;
   height: 20px;
-  width: 75%;
+  width: 85%;
   padding: 10px;
   color: white;
   font-size: 18px;
 }
 .itinerairesList .ficheItineraire .ficheTexte .difficulte {
-  color: blue;
   padding: 5px 50px 0px 30px;
   font-weight: 550;
+}
+.itinerairesList .ficheItineraire .ficheTexte .simple {
+  color: blue;
+}
+.itinerairesList .ficheItineraire .ficheTexte .difficile {
+  color: red;
 }
 .itinerairesList .ficheItineraire .ficheTexte .titreItineraire {
   padding-left: 10px;
