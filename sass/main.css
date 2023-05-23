@@ -357,13 +357,14 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: 350px 350px;
-  justify-content: left;
+  justify-content: center;
   margin-left: 50px;
 }
 
 .imagerow {
-  width: 262.5px;
-  height: 350px;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
 }
 
 .row1 {
@@ -373,7 +374,7 @@ h2 {
 }
 
 .plan {
-  width: 65%;
+  width: 60%;
   border-radius: 20px;
 }
 

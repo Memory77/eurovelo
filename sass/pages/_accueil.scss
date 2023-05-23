@@ -354,23 +354,24 @@ h2 {
 .grid {
     display: grid;
     grid-template-columns: 350px 350px;
-    justify-content: left;
+    justify-content: center;
     margin-left: 50px;
 }
 
-.imagerow {
-    width: 262.5px;
-    height: 350px;
-}
-
-.row1 {
+  .imagerow{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+  }
+  
+.row1{
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
 }
 
-.plan {
-    width: 65%;
+.plan{
+    width:60%;
     border-radius: 20px;
 }
 
@@ -379,6 +380,6 @@ h2 {
     justify-content: center;
 }
 
-.intro {
+.intro{
     text-align: center;
 }
