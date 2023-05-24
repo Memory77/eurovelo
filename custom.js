@@ -1,3 +1,8 @@
+// Importer les dépendances
+// import 'leaflet/dist/leaflet.css';
+// import L from 'leaflet';
+// import 'leaflet-gpx';
+
 
 // AVIS 
 
@@ -6,16 +11,16 @@ fetch('http://85.169.220.243:5004/api/commentaires')
   .then(data => {
     const avisData = data.data; // Accéder au tableau de données dans la clé "data"
 
-    // Traitement des données, on parcours le tableau avec la fonction map
+    // ttt des données, on parcours le tableau avec la fonction map
 
     const avisElements = avisData.map(avis => {
       const id = avis.id;
 
-      //Le format de date qui s'affiche actuellement, "2023-05-21T22:18:06.452Z", est le format ISO 8601. 
-      //Si vous souhaitez afficher la date dans un format différent, vous pouvez utiliser les fonctions de manipulation de date disponibles dans JavaScript.
-      //Voici un exemple de code pour formater la date dans le format "jour/mois/année heure:minute" :
+      //le format de date qui s'affiche actuellement, "2023-05-21T22:18:06.452Z", est le format ISO 8601. 
+      //si on afficher la date dans un format différent, vous pouvez utiliser les fonctions de manipulation de date disponibles dans JavaScript.
+      //exemple de code pour formater la date dans le format "jour/mois/année heure:minute" :
       //la méthode toLocaleString pour convertir la date en une représentation locale spécifique. En utilisant l'argument 'fr-FR', nous spécifions que nous souhaitons formater la date selon les conventions françaises. 
-      //Vous pouvez ajuster le code en fonction de vos besoins de formatage de date.
+      //on peut ajuster le code en fonction de vos besoins de formatage de date.
       const rawDate = avis.attributes.date; // Format ISO 8601
       const date = new Date(rawDate).toLocaleString('fr-FR', {
         day: 'numeric',
@@ -32,7 +37,7 @@ fetch('http://85.169.220.243:5004/api/commentaires')
       const titre = avis.attributes.titre;
       const description = avis.attributes.description;
 
-      // Utilisez ces variables pour construire votre HTML
+      // utilisation des variables pour construire l'html
 
       return `
         <div class="avis-content-box">
@@ -62,26 +67,26 @@ fetch('http://85.169.220.243:5004/api/commentaires')
   
 
 
-// Ouais ouais ouais
+// itinéraires
 
 
 map = L.map(map).setView([46.603354, 1.888334], 6); // Initialiser avec une vue par défaut
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-// // Charger le fichier GPX
-// var gpxLayer = new L.GPX("chemin/vers/votre/fichier.gpx", {
-//   async: true,
-//   marker_options: {
-//     startIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
-//     endIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-red.png',
-//     shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png'
-//   }
-// });
+// Charger le fichier GPX
+var gpxLayer = new L.GPX('gpxpoints/angres-lens.gpx', {
+  async: true,
+  marker_options: {
+    startIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
+    endIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-red.png',
+    shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png'
+  }
+});
 
-// // Ajouter la couche GPX à la carte
-// gpxLayer.on('loaded', function (e) {
-//   map.fitBounds(e.target.getBounds());
-// });
+// Ajouter la couche GPX à la carte
+gpxLayer.on('loaded', function (e) {
+  map.fitBounds(e.target.getBounds());
+});
 
-// gpxLayer.addTo(map);
+gpxLayer.addTo(map);
   

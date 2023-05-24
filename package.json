@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "fast-xml-parser": "^4.2.2"
+    "fast-xml-parser": "^4.2.2",
+    "leaflet-gpx": "^1.7.0"
   }
 }
