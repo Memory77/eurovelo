@@ -23,6 +23,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   border: 2px solid white;
+  transition: 0.2s;
 }
 
 .btn-white {
@@ -235,7 +236,7 @@ footer p, footer h2 {
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 6px;
-  height: 33vh;
+  height: 325px;
   text-align: center;
   box-shadow: 10px 5px 5px rgb(96, 84, 84);
 }
@@ -293,9 +294,10 @@ h2 {
 }
 #avis #avis-box {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
-  gap: 50px;
+  margin: auto;
+  gap: 30px;
 }
 #avis #avis-box .avis-content-box {
   width: 400px;
@@ -406,12 +408,14 @@ h2 {
 
 .row1 {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  margin: auto;
   gap: 20px;
 }
 
 .plan {
   width: 60%;
+  height: 40vh;
   border-radius: 20px;
 }
 
@@ -422,6 +426,14 @@ h2 {
 
 .intro {
   text-align: center;
+  justify-content: center;
+}
+.intro p {
+  margin: auto;
+  font-size: 17px;
+  line-height: 30px;
+  width: 60%;
+  margin-bottom: 50px;
 }
 
 .cyclistes {
@@ -430,17 +442,31 @@ h2 {
   width: 200px;
   height: 200px;
   border-radius: 20px;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.cyclistes img {
+  justify-self: center;
+  align-self: center;
+  transition: 0.2s;
 }
 .cyclistes p {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+  margin: 0;
   left: 50%;
-  top: 50%;
+  bottom: 10%;
   color: white;
+  transition: 0.2s;
 }
 
 .cyclistes:hover img {
   filter: blur(5px);
+  height: 250px;
+  width: 250px;
+}
+.cyclistes:hover p {
+  bottom: 30%;
 }
 
 .listMap {

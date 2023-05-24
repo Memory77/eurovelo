@@ -123,16 +123,8 @@
                     filter: blur(7px);
                 }
             }
-
         }
-
-
-
-
     }
-
-
-
 }
 
 
@@ -150,7 +142,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     border-radius: 6px;
-    height: 33vh;
+    height: 325px;
     text-align: center;
     box-shadow: 10px 5px 5px rgb(96, 84, 84);
 
@@ -270,10 +262,11 @@ h2 {
 
     #avis-box {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: center;
-        gap: 50px;
-        
+        margin: auto;
+        gap: 30px;
+
 
         .avis-content-box {
             width: 400px;
@@ -417,12 +410,14 @@ h2 {
 
 .row1 {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    margin: auto;
     gap: 20px;
 }
 
 .plan {
     width: 60%;
+    height: 40vh;
     border-radius: 20px;
 }
 
@@ -433,6 +428,16 @@ h2 {
 
 .intro {
     text-align: center;
+
+    justify-content: center;
+
+    p {
+        margin: auto;
+        font-size: 17px;
+        line-height: 30px;
+        width: 60%;
+        margin-bottom: 50px;
+    }
 }
 
 .cyclistes {
@@ -441,19 +446,37 @@ h2 {
     width: 200px;
     height: 200px;
     border-radius: 20px;
+    transition: .2s;
+    overflow: hidden;
+
+    img {
+        justify-self: center;
+        align-self: center;
+        transition: .2s;
+    }
 
     p {
         position: absolute;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
+        margin: 0;
         left: 50%;
-        top: 50%;
+        bottom: 10%;
         color: white;
+        transition: .2s;
     }
 
 }
 
 .cyclistes:hover {
+
+
     img {
         filter: blur(5px);
+        height: 250px;
+        width: 250px;
+    }
+
+    p {
+        bottom: 30%;
     }
 }
