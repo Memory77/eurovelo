@@ -1,4 +1,4 @@
-footer{
+#footerbottom{
     background-color: rgb(200, 199, 199);
     width: 100%;
     height: 30vh;
@@ -6,16 +6,62 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 40px;
-
-    #footer-content img {
-        
+    p{
+        color: white;
     }
 
+  }  
+
+#footertop{
+    background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
+    height: 50vh;
+    
+    .footercover {
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+
+    .footer-box{
+        margin: 0 10%;
+        padding-top: 5%;
+        #icons{
+            float: right;
+
+        }
+        .btn-blue{
+            background-color: rgb(4, 136, 168);
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        .footer-content{
+            padding-bottom: 15px;
+            img{
+              width: 10%;
+             }
+
+        }
+        
+        
+
+        }
+    }
+}
+
+#copyright{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(92, 91, 91);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
     p, h2{
         color: white;
     }
 }
-    
+
+   
 
 
 

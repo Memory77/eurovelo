@@ -109,7 +109,7 @@ header nav ul li a {
   font-weight: bold;
 }
 
-footer {
+#footerbottom {
   background-color: rgb(200, 199, 199);
   width: 100%;
   height: 30vh;
@@ -118,7 +118,49 @@ footer {
   justify-content: center;
   gap: 40px;
 }
-footer p, footer h2 {
+#footerbottom p {
+  color: white;
+}
+
+#footertop {
+  background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
+  height: 50vh;
+}
+#footertop .footercover {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+}
+#footertop .footercover .footer-box {
+  margin: 0 10%;
+  padding-top: 5%;
+}
+#footertop .footercover .footer-box #icons {
+  float: right;
+}
+#footertop .footercover .footer-box .btn-blue {
+  background-color: rgb(4, 136, 168);
+  color: white;
+}
+#footertop .footercover .footer-box p {
+  color: white;
+}
+#footertop .footercover .footer-box .footer-content {
+  padding-bottom: 15px;
+}
+#footertop .footercover .footer-box .footer-content img {
+  width: 10%;
+}
+
+#copyright {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(92, 91, 91);
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+#copyright p, #copyright h2 {
   color: white;
 }
 
