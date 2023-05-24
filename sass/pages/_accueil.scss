@@ -8,10 +8,15 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 80vh;
+        position: relative;
 
         .vitrine-content {
             text-align: center;
-            padding-top: 300px;
+            // padding-top: 300px;
+            position: absolute;
+            transform: translate(-50%, 0%);
+            bottom: 30px;
+            left: 50%;
             color: white;
 
             h1 {
@@ -31,6 +36,22 @@
 
                 input {
                     border-radius: 6px;
+                    width: 300px;
+                }
+
+                #depart,
+                #arrivee {
+                    border: none;
+                    position: relative;
+                }
+
+                #depart::placeholder,
+                #arrivee::placeholder {
+                    font-size: 12px;
+                    left: 30%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    position: absolute;
                 }
 
                 .btn {
@@ -39,6 +60,12 @@
                     padding: 10px 15px;
                     background-color: rgb(78, 203, 237);
                     color: white;
+                    transition: .2s;
+                }
+
+                .btn:hover {
+                    background-color: white;
+                    color: rgb(78, 203, 237);
                 }
             }
         }

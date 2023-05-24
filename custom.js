@@ -60,6 +60,28 @@ fetch('http://85.169.220.243:5004/api/commentaires')
     console.error(error);
   });
   
-  
 
+
+// Ouais ouais ouais
+
+
+map = L.map(map).setView([46.603354, 1.888334], 6); // Initialiser avec une vue par défaut
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+// // Charger le fichier GPX
+// var gpxLayer = new L.GPX("chemin/vers/votre/fichier.gpx", {
+//   async: true,
+//   marker_options: {
+//     startIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
+//     endIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-red.png',
+//     shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png'
+//   }
+// });
+
+// // Ajouter la couche GPX à la carte
+// gpxLayer.on('loaded', function (e) {
+//   map.fitBounds(e.target.getBounds());
+// });
+
+// gpxLayer.addTo(map);
   
