@@ -163,7 +163,7 @@ footer p {
 #accueil #temoignages {
   background-image: url("../../images/49595267696_3e61c2eb17_k.jpg");
   width: 100%;
-  height: 70vh;
+  height: 900px;
 }
 #accueil #temoignages h1 {
   color: white;
@@ -394,7 +394,7 @@ h2 {
   display: grid;
   grid-template-columns: 350px 350px;
   justify-content: space-around;
-  padding-bottom: 10%;
+  padding-bottom: 100px;
 }
 
 .imagerow {
