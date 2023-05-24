@@ -184,9 +184,10 @@ footer p, footer h2 {
   width: 100%;
   height: 100%;
   text-align: center;
+  overflow: hidden;
 }
 #accueil #temoignages .temoignages-content {
-  width: 125%;
+  width: 4000px;
   height: 55vh;
   display: flex;
   flex-direction: row;
@@ -271,7 +272,7 @@ h2 {
 
 @keyframes carousel-animation {
   0% {
-    transform: translateX(15%);
+    transform: translateX(0%);
     /* Démarre depuis la position initiale */
   }
   100% {
@@ -302,6 +303,7 @@ h2 {
   background-color: rgb(230, 230, 230);
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 10px 5px 5px rgb(144, 134, 134);
 }
 #avis #avis-box .avis-content-box .name {
   font-weight: bold;
@@ -316,6 +318,9 @@ h2 {
 #avis #avis-box .avis-content-box .notes {
   display: flex;
   justify-content: space-around;
+}
+#avis #avis-box .avis-content-box .commentaire h2 {
+  color: black;
 }
 
 /* rejoindre */
@@ -387,10 +392,10 @@ h2 {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 350px 350px;
-  justify-content: left;
-  margin-left: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-bottom: 100px;
 }
 
 .imagerow {
