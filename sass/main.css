@@ -66,7 +66,7 @@ a {
 
 header {
   width: 100%;
-  height: 15vh;
+  height: 120px;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
@@ -154,13 +154,15 @@ header nav ul li a {
 
 #copyright {
   width: 100%;
-  height: 10vh;
-  background-color: rgb(92, 91, 91);
+  height: 50px;
+  background-color: rgb(68, 68, 68);
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 100px;
 }
-#copyright p, #copyright h2 {
+#copyright p,
+#copyright h2 {
   color: white;
 }
 
@@ -174,10 +176,14 @@ header nav ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
+  position: relative;
 }
 #accueil #vitrine .vitrine-content {
   text-align: center;
-  padding-top: 300px;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  bottom: 30px;
+  left: 50%;
   color: white;
 }
 #accueil #vitrine .vitrine-content h1 {
@@ -195,6 +201,27 @@ header nav ul li a {
 }
 #accueil #vitrine .vitrine-content form input {
   border-radius: 6px;
+  width: 300px;
+}
+#accueil #vitrine .vitrine-content form #depart,
+#accueil #vitrine .vitrine-content form #arrivee {
+  border: none;
+  position: relative;
+}
+#accueil #vitrine .vitrine-content form #depart::-moz-placeholder, #accueil #vitrine .vitrine-content form #arrivee::-moz-placeholder {
+  font-size: 12px;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#accueil #vitrine .vitrine-content form #depart::placeholder,
+#accueil #vitrine .vitrine-content form #arrivee::placeholder {
+  font-size: 12px;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 #accueil #vitrine .vitrine-content form .btn {
   border: 2px solid white;
@@ -202,6 +229,11 @@ header nav ul li a {
   padding: 10px 15px;
   background-color: rgb(78, 203, 237);
   color: white;
+  transition: 0.2s;
+}
+#accueil #vitrine .vitrine-content form .btn:hover {
+  background-color: white;
+  color: rgb(78, 203, 237);
 }
 #accueil #temoignages {
   background-image: url("../../images/49595267696_3e61c2eb17_k.jpg");
@@ -594,11 +626,11 @@ h2 {
   margin-left: 10px;
   margin-bottom: 10px;
   width: 95%;
-  height: 300px;
+  height: 250px;
 }
 .itinerairesList .ficheItineraire .CaRemplaceUneImage {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background-color: rgb(93, 23, 233);
 }
 .itinerairesList .ficheItineraire .ficheTexte {
@@ -631,7 +663,7 @@ h2 {
   width: 100%;
   bottom: 0;
   padding: 0px 20px 0px 10px;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
   font-size: 700;
 }
