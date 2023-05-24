@@ -6,12 +6,12 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
-
     p{
         color: white;
     }
-}
-    
+
+  }  
+
 #footertop{
     background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
     height: 50vh;
@@ -22,10 +22,6 @@
         height: 100%;
 
     .footer-box{
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // gap: 40px;
         margin: 0 10%;
         padding-top: 5%;
         #icons{
@@ -45,8 +41,6 @@
               width: 10%;
              }
 
-
-    
         }
         
         
@@ -62,7 +56,7 @@
     display: flex;
     justify-content: center;
     gap: 100px;
-    p{
+    p, h2{
         color: white;
     }
 }
