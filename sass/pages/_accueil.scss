@@ -480,3 +480,124 @@ h2 {
         bottom: 30%;
     }
 }
+
+
+// reservation 
+
+
+    #reservations{
+        background-image: url('../../images/49595519962_b8beec9488_k.jpg');
+        width: 100%;
+        height: 900px;
+
+        h1 {
+            color: white;
+            padding-top: 10px;
+            font-size: 60px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-top: 30px;
+        }
+
+        p {
+            color: white;
+            width: 40%;
+            margin: auto;
+            padding-bottom: 40px;
+        }
+
+        // box juste pour effet d'ombre sur l'image
+        #reservation-cover {
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        .reservation-content {
+
+            width: 4000px;
+            height: 48vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 90px;
+            gap: 50px;
+
+            .res-img {
+                display: flex;
+                position: relative;
+                height: 300px;
+                width: 450px;
+                overflow: hidden;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+
+                img {
+                    height: 300px;
+                    transition: .2s ease;
+
+                }
+
+                p {
+                    position: absolute;
+                    transform: translate(-50%, 0%);
+                    bottom: 5%;
+                    width: 80%;
+                    font-size: 25px;
+                    left: 50%;
+                    transition: .2s ease;
+                }
+            }
+
+            .res-img:hover {
+                p {
+                    bottom: 20%;
+                }
+
+                img {
+                    height: 350px;
+                    width: 450px;
+                    filter: blur(7px);
+                }
+            }
+        }
+    }
+
+
+    /* carousel reservation */
+   
+.reservation-content {
+
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+
+    .res-img {
+
+        margin-left: 1rem;
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 450px;
+        margin-left: 1rem;
+        scroll-snap-align: start;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3d4852;
+    border-radius: 3px;
+}
