@@ -188,6 +188,8 @@ header nav ul li a {
 
 @media screen and (max-width: 800px) {
   #footerbottom {
+    display: flex;
+    flex-flow: column nowrap;
     height: 40vh;
     padding-bottom: 50px;
   }
@@ -195,6 +197,21 @@ header nav ul li a {
   #footerbottom p {
     padding-left: 40px;
     text-align: center;
+  }
+  .footer-box {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    position: relative;
+  }
+  .footer-box a {
+    text-align: center;
+  }
+  #icons {
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    right: 0px;
   }
   #copyright p {
     font-size: 15px;
@@ -580,37 +597,6 @@ h2 {
   bottom: 30%;
 }
 
-@media screen and (max-width: 1300px) {
-  #rejoindre #rejoindre_grid {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  #accueil #vitrine .vitrine-content form {
-    flex-flow: column nowrap;
-  }
-}
-@media screen and (max-width: 800px) {
-  .intro {
-    justify-content: left;
-    overflow: hidden;
-  }
-  .grid {
-    overflow: hidden;
-    width: 80%;
-    overflow: auto;
-    justify-content: left;
-    padding-left: 50px;
-    padding-right: 100px;
-    transition: 0.2s;
-  }
-  .grid::-webkit-scrollbar {
-    width: 0;
-  }
-  .row1 {
-    flex-flow: row nowrap;
-    padding-right: 0px;
-  }
-}
 #reservations {
   background-image: url("../../images/49595519962_b8beec9488_k.jpg");
   width: 100%;
@@ -637,13 +623,17 @@ h2 {
   text-align: center;
   overflow: hidden;
 }
+#reservations .reservationScrollBar {
+  overflow: auto;
+}
 #reservations .reservation-content {
-  width: 4000px;
+  width: 5300px;
   height: 48vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   padding-top: 90px;
+  padding-left: 50px;
   gap: 50px;
 }
 #reservations .reservation-content .res-img {
@@ -655,9 +645,10 @@ h2 {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  overflow: hidden;
 }
 #reservations .reservation-content .res-img img {
-  height: 300px;
+  height: 400px;
   transition: 0.2s ease;
 }
 #reservations .reservation-content .res-img p {
@@ -673,19 +664,16 @@ h2 {
   bottom: 20%;
 }
 #reservations .reservation-content .res-img:hover img {
-  height: 350px;
-  width: 450px;
+  height: 450px;
   filter: blur(7px);
 }
 
 /* carousel reservation */
-.reservation-content {
+.reservation-cover {
   display: flex;
-  overflow-x: scroll;
   padding: 1rem 0;
-  scroll-snap-type: x mandatory;
 }
-.reservation-content .res-img {
+.reservation-cover .res-img {
   margin-left: 1rem;
   flex-grow: 1;
   flex-shrink: 0;
@@ -699,7 +687,7 @@ h2 {
 }
 
 ::-webkit-scrollbar {
-  height: 6px;
+  height: 5px;
   background-color: #F5F5F5;
 }
 
@@ -708,6 +696,58 @@ h2 {
   border-radius: 3px;
 }
 
+@media screen and (max-width: 1300px) {
+  #rejoindre #rejoindre_grid {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #accueil #vitrine .vitrine-content form {
+    flex-flow: column nowrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  .intro {
+    justify-content: left;
+    overflow: hidden;
+  }
+  .grid {
+    overflow: hidden;
+    width: 80%;
+    overflow: auto;
+    justify-content: left;
+    padding-left: 50px;
+    padding-right: 100px;
+    transition: 0.2s;
+  }
+  .grid::-webkit-scrollbar,
+  .reservationScrollBar::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+  .row1 {
+    flex-flow: row nowrap;
+    padding-right: 0px;
+  }
+  #reservation-cover {
+    height: 50vh;
+  }
+  #reservation-cover h1 {
+    font-size: 25px;
+  }
+  #reservation-cover p {
+    width: 80%;
+  }
+  #reservation-cover .reservationScrollBar {
+    width: 95%;
+  }
+  #reservation-cover .reservationScrollBar .reservation-content {
+    width: 1800px;
+  }
+  #reservation-cover .reservationScrollBar .res-img {
+    height: 200px;
+    width: 300px;
+  }
+}
 .listMap {
   display: grid;
   grid-template-rows: 1fr 1fr;
