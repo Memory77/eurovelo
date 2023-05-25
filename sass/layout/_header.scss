@@ -14,6 +14,7 @@ header {
         p {
             padding: 0 15px;
             font-size: 20px;
+            transition: .2s;
         }
 
     }
@@ -47,17 +48,22 @@ header {
                     font-size: 20px;
                     font-weight: 400;
                     font-weight: bold;
+                    transition: .2s;
                 }
-
             }
         }
-
-
     }
-
-
 }
 
-
+@media screen and (max-width: 1300px) {
+    header .nav-top p,header nav ul li a {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 800px) {
+    header { display: none;
+        
+    }
+}
 
 // le header a une box-shadow !!

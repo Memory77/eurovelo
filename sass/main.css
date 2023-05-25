@@ -80,6 +80,7 @@ header .nav-top {
 header .nav-top p {
   padding: 0 15px;
   font-size: 20px;
+  transition: 0.2s;
 }
 header nav {
   background-color: white;
@@ -107,13 +108,25 @@ header nav ul li a {
   font-size: 20px;
   font-weight: 400;
   font-weight: bold;
+  transition: 0.2s;
 }
 
+@media screen and (max-width: 1300px) {
+  header .nav-top p, header nav ul li a {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 800px) {
+  header {
+    display: none;
+  }
+}
 #footerbottom {
   background-color: rgb(200, 199, 199);
   width: 100%;
   height: 30vh;
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -148,6 +161,10 @@ header nav ul li a {
 #footertop .footercover .footer-box .footer-content {
   padding-bottom: 15px;
 }
+#footertop .footercover .footer-box .footer-content h2,
+#footertop .footercover .footer-box .footer-content p {
+  padding-left: 20px;
+}
 #footertop .footercover .footer-box .footer-content img {
   width: 10%;
 }
@@ -157,15 +174,32 @@ header nav ul li a {
   height: 50px;
   background-color: rgb(68, 68, 68);
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 50px;
+  transition: 0.2s;
 }
 #copyright p,
 #copyright h2 {
   color: white;
 }
 
+@media screen and (max-width: 800px) {
+  #footerbottom {
+    height: 40vh;
+    padding-bottom: 50px;
+  }
+  #footerbottom h2,
+  #footerbottom p {
+    padding-left: 40px;
+    text-align: center;
+  }
+  #copyright p {
+    font-size: 15px;
+    gap: 20px;
+  }
+}
 #accueil {
   height: 400vh;
 }
@@ -198,6 +232,7 @@ header nav ul li a {
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  align-items: center;
 }
 #accueil #vitrine .vitrine-content form input {
   border-radius: 6px;
@@ -205,6 +240,7 @@ header nav ul li a {
 }
 #accueil #vitrine .vitrine-content form #depart,
 #accueil #vitrine .vitrine-content form #arrivee {
+  height: 40px;
   border: none;
   position: relative;
 }
@@ -543,6 +579,37 @@ h2 {
   bottom: 30%;
 }
 
+@media screen and (max-width: 1300px) {
+  #rejoindre #rejoindre_grid {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #accueil #vitrine .vitrine-content form {
+    flex-flow: column nowrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  .intro {
+    justify-content: left;
+    overflow: hidden;
+  }
+  .grid {
+    overflow: hidden;
+    width: 80%;
+    overflow: auto;
+    justify-content: left;
+    padding-left: 50px;
+    padding-right: 100px;
+    transition: 0.2s;
+  }
+  .grid::-webkit-scrollbar {
+    width: 0;
+  }
+  .row1 {
+    flex-flow: row nowrap;
+    padding-right: 0px;
+  }
+}
 .listMap {
   display: grid;
   grid-template-rows: 1fr 1fr;

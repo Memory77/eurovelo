@@ -33,6 +33,7 @@
                 flex-direction: row;
                 justify-content: center;
                 gap: 30px;
+                align-items: center;
 
                 input {
                     border-radius: 6px;
@@ -41,6 +42,7 @@
 
                 #depart,
                 #arrivee {
+                    height: 40px;
                     border: none;
                     position: relative;
                 }
@@ -505,5 +507,46 @@ h2 {
 
     p {
         bottom: 30%;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    #rejoindre #rejoindre_grid {
+        display: flex;
+        flex-flow: row wrap;
+        // grid-template-rows: repeat(5, 400px);
+        // grid-template-columns: repeat(2, 400px);
+    }
+
+    #accueil #vitrine .vitrine-content form {
+        flex-flow: column nowrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro {
+        justify-content: left;
+        overflow: hidden;
+    }
+
+    .grid {
+        // display: none;
+        overflow: hidden;
+        width: 80%;
+        overflow: auto;
+        justify-content: left;
+        padding-left: 50px;
+        padding-right: 100px;
+        transition: .2s;
+    }
+
+    .grid::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .row1 {
+        flex-flow: row nowrap;
+        padding-right: 0px;
     }
 }
