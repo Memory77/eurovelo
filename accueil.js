@@ -8,7 +8,7 @@ var mapAccueil = L.map('map-accueil').setView([46.603354, 1.888334], 6);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapAccueil);
 
 // // Charger le fichier GPX
-var gpxLayer = new L.GPX('gpxpoints/eurovelo-5-via-romea-francigena-partie-france-1.gpx', {
+var gpxLayer = new L.GPX('gpxpoints/track.gpx', {
 async: true,
 marker_options: {
     startIconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',

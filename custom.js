@@ -22,7 +22,7 @@ function loadDefaultMap() {
 
     mapContainer.map = map; // Stocker la référence de la carte dans l'élément HTML pour une utilisation ultérieure
 
-    const defaultGpxUrl = 'gpxpoints/eurovelo-5-via-romea-francigena-partie-france-1.gpx'; // Remplacez par l'URL du tracé GPX par défaut
+    const defaultGpxUrl = 'gpxpoints/track.gpx'; // Remplacez par l'URL du tracé GPX par défaut
     loadGPX(defaultGpxUrl, map);
   }
 }
