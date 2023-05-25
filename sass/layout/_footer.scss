@@ -3,6 +3,7 @@
     width: 100%;
     height: 30vh;
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -44,6 +45,12 @@
             .footer-content {
                 padding-bottom: 15px;
 
+                h2,
+                p {
+                    padding-left: 20px;
+
+                }
+
                 img {
                     width: 10%;
                 }
@@ -61,12 +68,36 @@
     height: 50px;
     background-color: rgb(68, 68, 68);
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
+    transition: .2s;
+
 
     p,
     h2 {
         color: white;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    #footerbottom {
+
+        height: 40vh;
+        padding-bottom: 50px;
+
+        h2,
+        p {
+            padding-left: 40px;
+            text-align: center;
+        }
+    }
+
+    #copyright {
+        p {
+            font-size: 15px;
+            gap: 20px;
+        }
     }
 }
