@@ -23,6 +23,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   border: 2px solid white;
+  transition: 0.2s;
 }
 
 .btn-white {
@@ -65,7 +66,7 @@ a {
 
 header {
   width: 100%;
-  height: 15vh;
+  height: 120px;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
@@ -123,6 +124,7 @@ header nav ul li a {
 
 #footertop {
   background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
+  background-size: cover;
   height: 50vh;
 }
 #footertop .footercover {
@@ -153,13 +155,15 @@ header nav ul li a {
 
 #copyright {
   width: 100%;
-  height: 10vh;
-  background-color: rgb(92, 91, 91);
+  height: 50px;
+  background-color: rgb(68, 68, 68);
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 100px;
 }
-#copyright p, #copyright h2 {
+#copyright p,
+#copyright h2 {
   color: white;
 }
 
@@ -173,10 +177,14 @@ header nav ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 80vh;
+  position: relative;
 }
 #accueil #vitrine .vitrine-content {
   text-align: center;
-  padding-top: 300px;
+  position: absolute;
+  transform: translate(-50%, 0%);
+  bottom: 30px;
+  left: 50%;
   color: white;
 }
 #accueil #vitrine .vitrine-content h1 {
@@ -194,6 +202,27 @@ header nav ul li a {
 }
 #accueil #vitrine .vitrine-content form input {
   border-radius: 6px;
+  width: 300px;
+}
+#accueil #vitrine .vitrine-content form #depart,
+#accueil #vitrine .vitrine-content form #arrivee {
+  border: none;
+  position: relative;
+}
+#accueil #vitrine .vitrine-content form #depart::-moz-placeholder, #accueil #vitrine .vitrine-content form #arrivee::-moz-placeholder {
+  font-size: 12px;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+#accueil #vitrine .vitrine-content form #depart::placeholder,
+#accueil #vitrine .vitrine-content form #arrivee::placeholder {
+  font-size: 12px;
+  left: 30%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
 #accueil #vitrine .vitrine-content form .btn {
   border: 2px solid white;
@@ -201,6 +230,11 @@ header nav ul li a {
   padding: 10px 15px;
   background-color: rgb(78, 203, 237);
   color: white;
+  transition: 0.2s;
+}
+#accueil #vitrine .vitrine-content form .btn:hover {
+  background-color: white;
+  color: rgb(78, 203, 237);
 }
 #accueil #temoignages {
   background-image: url("../../images/49595267696_3e61c2eb17_k.jpg");
@@ -277,7 +311,7 @@ header nav ul li a {
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 6px;
-  height: 33vh;
+  height: 325px;
   text-align: center;
   box-shadow: 10px 5px 5px rgb(96, 84, 84);
 }
@@ -335,9 +369,10 @@ h2 {
 }
 #avis #avis-box {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
-  gap: 50px;
+  margin: auto;
+  gap: 30px;
 }
 #avis #avis-box .avis-content-box {
   width: 400px;
@@ -448,12 +483,14 @@ h2 {
 
 .row1 {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  margin: auto;
   gap: 20px;
 }
 
 .plan {
   width: 60%;
+  height: 40vh;
   border-radius: 20px;
 }
 
@@ -464,6 +501,14 @@ h2 {
 
 .intro {
   text-align: center;
+  justify-content: center;
+}
+.intro p {
+  margin: auto;
+  font-size: 17px;
+  line-height: 30px;
+  width: 60%;
+  margin-bottom: 50px;
 }
 
 .cyclistes {
@@ -472,17 +517,128 @@ h2 {
   width: 200px;
   height: 200px;
   border-radius: 20px;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.cyclistes img {
+  justify-self: center;
+  align-self: center;
+  transition: 0.2s;
 }
 .cyclistes p {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+  margin: 0;
   left: 50%;
-  top: 50%;
+  bottom: 10%;
   color: white;
+  transition: 0.2s;
 }
 
 .cyclistes:hover img {
   filter: blur(5px);
+  height: 250px;
+  width: 250px;
+}
+.cyclistes:hover p {
+  bottom: 30%;
+}
+
+#reservations {
+  background-image: url("../../images/49595519962_b8beec9488_k.jpg");
+  width: 100%;
+  height: 900px;
+}
+#reservations h1 {
+  color: white;
+  padding-top: 10px;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 30px;
+}
+#reservations p {
+  color: white;
+  width: 40%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+#reservations #reservation-cover {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+#reservations .reservation-content {
+  width: 4000px;
+  height: 48vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 90px;
+  gap: 50px;
+}
+#reservations .reservation-content .res-img {
+  display: flex;
+  position: relative;
+  height: 300px;
+  width: 450px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+#reservations .reservation-content .res-img img {
+  height: 300px;
+  transition: 0.2s ease;
+}
+#reservations .reservation-content .res-img p {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  bottom: 5%;
+  width: 80%;
+  font-size: 25px;
+  left: 50%;
+  transition: 0.2s ease;
+}
+#reservations .reservation-content .res-img:hover p {
+  bottom: 20%;
+}
+#reservations .reservation-content .res-img:hover img {
+  height: 350px;
+  width: 450px;
+  filter: blur(7px);
+}
+
+/* carousel reservation */
+.reservation-content {
+  display: flex;
+  overflow-x: scroll;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+.reservation-content .res-img {
+  margin-left: 1rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 450px;
+  margin-left: 1rem;
+  scroll-snap-align: start;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d4852;
+  border-radius: 3px;
 }
 
 .listMap {
@@ -568,11 +724,11 @@ h2 {
   margin-left: 10px;
   margin-bottom: 10px;
   width: 95%;
-  height: 300px;
+  height: 250px;
 }
 .itinerairesList .ficheItineraire .CaRemplaceUneImage {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background-color: rgb(93, 23, 233);
 }
 .itinerairesList .ficheItineraire .ficheTexte {
@@ -605,7 +761,7 @@ h2 {
   width: 100%;
   bottom: 0;
   padding: 0px 20px 0px 10px;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
   font-size: 700;
 }
