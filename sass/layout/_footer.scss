@@ -83,6 +83,8 @@
 
 @media screen and (max-width : 800px) {
     #footerbottom {
+        display: flex;
+        flex-flow: column nowrap;
 
         height: 40vh;
         padding-bottom: 50px;
@@ -92,6 +94,28 @@
             padding-left: 40px;
             text-align: center;
         }
+    }
+
+
+
+
+    .footer-box {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        position: relative;
+
+        a {
+            text-align: center;
+        }
+    }
+
+    #icons {
+        display: flex;
+        flex-flow: row nowrap;
+        position: absolute;
+        right: 0px;
+
     }
 
     #copyright {
