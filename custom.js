@@ -73,7 +73,7 @@ fetch('http://85.169.220.243:5004/api/itineraires')
       // Utilisation des variables pour construire le code HTML
       return `
         <figure class="ficheItineraire" data-gpx="${gpxUrl}">
-          <div class="CaRemplaceUneImage"><img src="${image}" class="CaRemplaceUneImage" alt="illustration"></div>
+          <div class="CaRemplaceUneImage"><img src="${image}" alt="illustration"></div>
           <div class="ficheTexte">
               <p class="typeItineraire">Nature, Patrimoine</p>
               <p class="difficulte ${difficulte === 'je me dépasse' ? 'simple' : 'difficile'}">${difficulte}</p>

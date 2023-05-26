@@ -138,7 +138,6 @@ header nav ul li a {
 #footertop {
   background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.2);
   padding-bottom: 100px;
 }
 #footertop .footercover {
@@ -801,7 +800,7 @@ h2 {
 }
 .listMap {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -876,25 +875,24 @@ h2 {
 .itinerairesList .ficheItineraire {
   display: grid;
   grid-template-columns: 200px 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 300px;
   border: 1px rgba(0, 0, 0, 0.418) solid;
   border-radius: 20px;
   overflow: hidden;
   margin-left: 10px;
   margin-bottom: 10px;
   width: 95%;
-  height: auto;
   transition: 0.5s;
 }
 .itinerairesList .ficheItineraire .CaRemplaceUneImage {
   background-color: rgba(93, 23, 233, 0);
   overflow: hidden;
-  height: 300px;
+  height: 350px;
   transition: 0.5s;
 }
 .itinerairesList .ficheItineraire .CaRemplaceUneImage img {
   transition: 0.5s;
-  height: 100%;
+  height: 400px;
   background-color: rgb(93, 23, 233);
 }
 .itinerairesList .ficheItineraire .ficheTexte {
@@ -924,7 +922,7 @@ h2 {
   color: black;
 }
 .itinerairesList .ficheItineraire .ficheTexte .descriptionItineraire {
-  width: 100%;
+  width: 90%;
   bottom: 0;
   padding: 0px 20px 0px 10px;
   font-size: 15px;
@@ -932,9 +930,55 @@ h2 {
   font-size: 700;
 }
 .itinerairesList .ficheItineraire:hover {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 300px 1fr;
 }
 
+@media screen and (max-width: 1500px) {
+  .etapesForm input {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .listMap {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .listMap .itinerairesList {
+    background-color: white;
+    width: 100%;
+    height: 30%;
+    border-radius: 30px;
+    transition: 0.2s;
+  }
+  .listMap .itinerairesList .planifierItineraire {
+    border-radius: 30px 30px 0px 0px;
+  }
+  .listMap .itinerairesList:hover {
+    height: 80%;
+  }
+  .listMap .miniHeader,
+  .listMap .itinerairesList::-webkit-scrollbar {
+    display: none;
+  }
+  .listMap .ficheItineraire {
+    height: 250px;
+    grid-template-columns: 150px 1fr;
+  }
+  .listMap .ficheItineraire .difficulte {
+    display: none;
+  }
+  .listMap .ficheItineraire:hover {
+    grid-template-columns: 100px 1fr;
+  }
+  .listMap #map {
+    transform: translate(-50%, 0%);
+    bottom: 0;
+    left: 50%;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+  }
+}
 /*
 Flaticon icon font: Flaticon
 */

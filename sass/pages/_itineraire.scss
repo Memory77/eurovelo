@@ -1,6 +1,6 @@
 .listMap {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -93,14 +93,14 @@
         // flex-flow: row nowrap;
         display: grid;
         grid-template-columns: 200px 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 300px;
         border: 1px rgba(0, 0, 0, 0.418) solid;
         border-radius: 20px;
         overflow: hidden;
         margin-left: 10px;
         margin-bottom: 10px;
         width: 95%;
-        height: auto;
+        // height: 300px;
         transition: .5s;
 
 
@@ -110,13 +110,13 @@
         .CaRemplaceUneImage {
             background-color: rgba(93, 23, 233, 0);
             overflow: hidden;
-            height: 300px;
+            height: 350px;
             transition: .5s;
         }
 
         .CaRemplaceUneImage img {
             transition: .5s;
-            height: 100%;
+            height: 400px;
             background-color: rgb(93, 23, 233);
         }
 
@@ -154,7 +154,7 @@
             }
 
             .descriptionItineraire {
-                width: 100%;
+                width: 90%;
                 bottom: 0;
                 padding: 0px 20px 0px 10px;
                 font-size: 15px;
@@ -165,6 +165,73 @@
     }
 
     .ficheItineraire:hover {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .etapesForm {
+        input {
+            font-size: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .listMap {
+        display: flex;
+        flex-flow: column nowrap;
+
+        .itinerairesList {
+            background-color: white;
+            width: 100%;
+            height: 30%;
+            border-radius: 30px;
+            transition: .2s;
+
+
+            .planifierItineraire {
+                border-radius: 30px 30px 0px 0px;
             }
+
+        }
+
+        .itinerairesList:hover {
+            height: 80%;
+        }
+
+        .miniHeader,
+        .itinerairesList::-webkit-scrollbar {
+            display: none;
+
+        }
+
+        .ficheItineraire {
+            height: 250px;
+            grid-template-columns: 150px 1fr;
+
+            .difficulte {
+                display: none;
+            }
+        }
+
+        .ficheItineraire:hover {
+            grid-template-columns: 100px 1fr;
+        }
+
+
+        #map {
+            transform: translate(-50%, 0%);
+            bottom: 0;
+            left: 50%;
+            height: 100vh;
+            width: 100%;
+            z-index: -1;
+
+        }
+
+
+    }
 }
