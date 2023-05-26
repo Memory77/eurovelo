@@ -125,15 +125,82 @@ loadDefaultMap();
 
 
 
+
+
+
+
+
+
+
+
+
 ////////////////////////////// FORMULAIRE ITINERAIRE
 
 
+// document.querySelector('.etapesForm').addEventListener('submit', function(event) {
+//   event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+
+//   // Récupérer les valeurs sélectionnées dans les listes déroulantes
+//   var depart = document.getElementById('ItineraireDepart').value;
+//   var arrivee = document.getElementById('ItineraireArrivee').value;
+
+//   // Effectuer les actions nécessaires avec les valeurs récupérées
+//   // Par exemple, vous pouvez rechercher les données correspondantes dans votre table
+//   // et récupérer les coordonnées pour créer le tracé
+
+//   // Afficher les valeurs sélectionnées à des fins de démonstration
+//   console.log('Départ:', depart);
+//   console.log('Arrivée:', arrivee);
+
+//   // Appeler une fonction pour créer le tracé avec les coordonnées récupérées
+//   // createTrace(depart, arrivee);
+// });
 
 
 
 
+// // Fonction pour récupérer les coordonnées des villes de départ et d'arrivée
+// function obtenirCoordonneesVilles(depart, arrivee) {
+//   var url = 'http://85.169.220.243:5004/api/villes';
 
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
+//       var villes = data.data;
+//       var coordDepart = null;
+//       var coordArrivee = null;
 
+//       // Parcourir les villes pour trouver les coordonnées de départ et d'arrivée
+//       for (var i = 0; i < villes.length; i++) {
+//         var attributs = villes[i].attributes;
+//         var nomVille = attributs.ville_name;
+//         var latitude = attributs.ville_lat;
+//         var longitude = attributs.ville_lon;
 
+//         if (nomVille === depart) {
+//           coordDepart = [latitude, longitude];
+//         } else if (nomVille === arrivee) {
+//           coordArrivee = [latitude, longitude];
+//         }
+//       }
 
+//       // Retourner les coordonnées
+//       return {
+//         coordDepart: coordDepart,
+//         coordArrivee: coordArrivee
+//       };
+//     });
+// }
 
+// // // Exemple d'utilisation de la fonction
+// // var depart = 'Aire-sur-la-lys'; // Remplace avec la valeur sélectionnée dans la liste déroulante
+// // var arrivee = 'St-Venant'; // Remplace avec la valeur sélectionnée dans la liste déroulante
+
+// obtenirCoordonneesVilles(depart, arrivee)
+//   .then(coordonnees => {
+//     console.log('Coordonnées du départ:', coordonnees.coordDepart);
+//     console.log('Coordonnées de l\'arrivée:', coordonnees.coordArrivee);
+//   })
+//   .catch(error => {
+//     console.error('Une erreur s\'est produite:', error);
+//   });
