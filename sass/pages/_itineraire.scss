@@ -89,22 +89,34 @@
 
     .ficheItineraire {
         // margin-bottom: 10px;
-        display: flex;
-        flex-flow: row nowrap;
+        // display: flex;
+        // flex-flow: row nowrap;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 1fr;
         border: 1px rgba(0, 0, 0, 0.418) solid;
         border-radius: 20px;
         overflow: hidden;
         margin-left: 10px;
         margin-bottom: 10px;
         width: 95%;
-        height: 250px;
+        height: auto;
+        transition: .5s;
+
 
 
         // Fausse image
 
         .CaRemplaceUneImage {
-            width: 250px;
-            height: 250px;
+            background-color: rgba(93, 23, 233, 0);
+            overflow: hidden;
+            height: 300px;
+            transition: .5s;
+        }
+
+        .CaRemplaceUneImage img {
+            transition: .5s;
+            height: 100%;
             background-color: rgb(93, 23, 233);
         }
 
@@ -151,4 +163,8 @@
             }
         }
     }
+
+    .ficheItineraire:hover {
+        grid-template-columns: 1fr 1fr;
+            }
 }

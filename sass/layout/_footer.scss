@@ -17,14 +17,16 @@
 #footertop {
     background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
     background-size: cover;
-    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-bottom: 100px;
 
     .footercover {
-        background-color: rgba(0, 0, 0, 0.2);
+
         width: 100%;
-        height: 100%;
+        height: auto;
 
         .footer-box {
+
             margin: 0 10%;
             padding-top: 5%;
 
@@ -65,12 +67,12 @@
 
 #copyright {
     width: 100%;
-    height: 50px;
+    height: auto;
     background-color: rgb(68, 68, 68);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     gap: 50px;
     transition: .2s;
 
@@ -82,6 +84,47 @@
 }
 
 @media screen and (max-width : 800px) {
+    footer {
+        #footertop {
+            .footer-box {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 20px;
+                position: relative;
+
+                a {
+                    text-align: center;
+                }
+
+                #icons {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    position: absolute;
+                    right: 0px;
+
+
+                }
+
+                .footer-content {
+                    p {
+                        text-align: justify;
+                    }
+                }
+            }
+
+
+        }
+
+
+
+
+
+
+
+    }
+
+
+
     #footerbottom {
         display: flex;
         flex-flow: column nowrap;
@@ -89,33 +132,20 @@
         height: 40vh;
         padding-bottom: 50px;
 
-        h2,
+        .footer-content {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
         p {
-            padding-left: 40px;
-            text-align: center;
+            width: 80%;
+            text-align: justify;
         }
-    }
-
-
-
-
-    .footer-box {
-        display: flex;
-        flex-flow: column nowrap;
-        gap: 20px;
-        position: relative;
-
-        a {
-            text-align: center;
-        }
-    }
-
-    #icons {
-        display: flex;
-        flex-flow: row nowrap;
-        position: absolute;
-        right: 0px;
-
     }
 
     #copyright {

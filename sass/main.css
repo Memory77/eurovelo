@@ -138,12 +138,12 @@ header nav ul li a {
 #footertop {
   background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
   background-size: cover;
-  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-bottom: 100px;
 }
 #footertop .footercover {
-  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 #footertop .footercover .footer-box {
   margin: 0 10%;
@@ -172,7 +172,7 @@ header nav ul li a {
 
 #copyright {
   width: 100%;
-  height: 50px;
+  height: auto;
   background-color: rgb(68, 68, 68);
   display: flex;
   flex-flow: row wrap;
@@ -187,31 +187,41 @@ header nav ul li a {
 }
 
 @media screen and (max-width: 800px) {
+  footer #footertop .footer-box {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    position: relative;
+  }
+  footer #footertop .footer-box a {
+    text-align: center;
+  }
+  footer #footertop .footer-box #icons {
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    right: 0px;
+  }
+  footer #footertop .footer-box .footer-content p {
+    text-align: justify;
+  }
   #footerbottom {
     display: flex;
     flex-flow: column nowrap;
     height: 40vh;
     padding-bottom: 50px;
   }
-  #footerbottom h2,
-  #footerbottom p {
-    padding-left: 40px;
-    text-align: center;
-  }
-  .footer-box {
+  #footerbottom .footer-content {
     display: flex;
     flex-flow: column nowrap;
-    gap: 20px;
-    position: relative;
+    align-items: center;
   }
-  .footer-box a {
+  #footerbottom h2 {
     text-align: center;
   }
-  #icons {
-    display: flex;
-    flex-flow: row nowrap;
-    position: absolute;
-    right: 0px;
+  #footerbottom p {
+    width: 80%;
+    text-align: justify;
   }
   #copyright p {
     font-size: 15px;
@@ -222,7 +232,7 @@ header nav ul li a {
   height: 400vh;
 }
 #accueil #vitrine {
-  background-image: url("../../images/eurovelo-img1.png");
+  background-image: url("../../images/main.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -292,7 +302,7 @@ header nav ul li a {
 #accueil #temoignages {
   background-image: url("../../images/49595267696_3e61c2eb17_k.jpg");
   width: 100%;
-  height: 900px;
+  height: auto;
 }
 #accueil #temoignages h1 {
   color: white;
@@ -443,7 +453,7 @@ h2 {
   padding: 10px;
   background-color: orange;
   color: white;
-  width: 250px;
+  width: auto;
 }
 #avis #avis-box .avis-content-box .notes {
   display: flex;
@@ -551,6 +561,11 @@ h2 {
   display: flex;
   justify-content: center;
 }
+.plancontainer #map-accueil {
+  border-radius: 10px;
+  width: 80%;
+  height: 500px;
+}
 
 .intro {
   text-align: center;
@@ -600,7 +615,7 @@ h2 {
 #reservations {
   background-image: url("../../images/49595519962_b8beec9488_k.jpg");
   width: 100%;
-  height: 900px;
+  height: auto;
 }
 #reservations h1 {
   color: white;
@@ -624,7 +639,12 @@ h2 {
   overflow: hidden;
 }
 #reservations .reservationScrollBar {
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 450px;
+}
+#reservations .reservationScrollBar::-webkit-scrollbar {
+  height: 10px;
 }
 #reservations .reservation-content {
   width: 5300px;
@@ -710,6 +730,9 @@ h2 {
     justify-content: left;
     overflow: hidden;
   }
+  .intro p {
+    text-align: justify;
+  }
   .grid {
     overflow: hidden;
     width: 80%;
@@ -727,6 +750,34 @@ h2 {
   .row1 {
     flex-flow: row nowrap;
     padding-right: 0px;
+  }
+  #temoignages #temoignage-cover p {
+    text-align: justify;
+    width: 80%;
+    line-height: 25px;
+    margin: auto;
+  }
+  #avis #avis-title {
+    width: 80%;
+    margin: auto;
+  }
+  #avis #avis-title p {
+    text-align: justify;
+    line-height: 35px;
+    font-size: 20px;
+  }
+  #avis #avis-box .avis-content-box {
+    width: 325px;
+    height: auto;
+  }
+  #rejoindre #rejoindre-title {
+    width: 80%;
+    margin: auto;
+  }
+  #rejoindre #rejoindre-title p {
+    text-align: justify;
+    line-height: 35px;
+    font-size: 20px;
   }
   #reservation-cover {
     height: 50vh;
@@ -823,19 +874,27 @@ h2 {
   color: rgb(66, 183, 247);
 }
 .itinerairesList .ficheItineraire {
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
   border: 1px rgba(0, 0, 0, 0.418) solid;
   border-radius: 20px;
   overflow: hidden;
   margin-left: 10px;
   margin-bottom: 10px;
   width: 95%;
-  height: 250px;
+  height: auto;
+  transition: 0.5s;
 }
 .itinerairesList .ficheItineraire .CaRemplaceUneImage {
-  width: 250px;
-  height: 250px;
+  background-color: rgba(93, 23, 233, 0);
+  overflow: hidden;
+  height: 300px;
+  transition: 0.5s;
+}
+.itinerairesList .ficheItineraire .CaRemplaceUneImage img {
+  transition: 0.5s;
+  height: 100%;
   background-color: rgb(93, 23, 233);
 }
 .itinerairesList .ficheItineraire .ficheTexte {
@@ -871,6 +930,9 @@ h2 {
   font-size: 15px;
   line-height: 30px;
   font-size: 700;
+}
+.itinerairesList .ficheItineraire:hover {
+  grid-template-columns: 1fr 1fr;
 }
 
 /*
