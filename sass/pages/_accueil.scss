@@ -162,6 +162,19 @@
 /* formulaire*/
 
 
+form input, form textarea, form select {
+    outline: none;
+    box-shadow: inset 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+form input, form textarea, form select {
+    background-color: #f7f7f7; 
+    border: none; 
+    padding: 7px; 
+    font-size: 16px; 
+    color: #555; 
+}
+
 
 
 #formulaire {
@@ -171,7 +184,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     border-radius: 6px;
-    height: 350px;
+    height: 375px;
     text-align: center;
     box-shadow: 10px 5px 5px rgb(96, 84, 84);
 
@@ -789,4 +802,14 @@ h2 {
             }
         }
     }
+}
+
+
+// responsive formulaire */
+@media screen and (max-width: 800px) {
+#formulaire
+ {height: 400px;
+  width: 90%;
+  padding-top: 10px;
+}
 }
