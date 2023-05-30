@@ -198,7 +198,8 @@ header nav ul li a {
 #footerbottom {
   background-color: rgb(200, 199, 199);
   width: 100%;
-  height: 30vh;
+  min-height: 30vh;
+  height: auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
