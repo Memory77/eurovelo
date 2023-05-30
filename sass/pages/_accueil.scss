@@ -162,17 +162,21 @@
 /* formulaire*/
 
 
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
     outline: none;
     box-shadow: inset 0px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
-form input, form textarea, form select {
-    background-color: #f7f7f7; 
-    border: none; 
-    padding: 7px; 
-    font-size: 16px; 
-    color: #555; 
+form input,
+form textarea,
+form select {
+    background-color: #f7f7f7;
+    border: none;
+    padding: 7px;
+    font-size: 16px;
+    color: #555;
 }
 
 
@@ -455,7 +459,7 @@ h2 {
 
 .row1 {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     margin: auto;
     gap: 20px;
 }
@@ -701,115 +705,116 @@ h2 {
     #formulaire {
         background-color: rgb(4, 208, 208);
         width: 80%;
-        
-        .grid {
-            // display: none;
-            overflow: hidden;
+    }
+
+    .grid {
+        // display: none;
+        overflow: hidden;
+        width: 80%;
+        overflow: auto;
+        justify-content: left;
+        padding-left: 50px;
+        padding-right: 100px;
+        transition: .2s;
+    }
+
+    .grid::-webkit-scrollbar,
+    .reservationScrollBar::-webkit-scrollbar {
+        width: 0;
+        display: none;
+    }
+
+    .row1 {
+        flex-flow: row nowrap;
+        padding-right: 0px;
+    }
+
+    #temoignages {
+
+        #temoignage-cover {
+            p {
+                text-align: justify;
+                width: 80%;
+                line-height: 25px;
+                margin: auto;
+            }
+        }
+    }
+
+    #avis {
+        #avis-title {
             width: 80%;
-            overflow: auto;
-            justify-content: left;
-            padding-left: 50px;
-            padding-right: 100px;
-            transition: .2s;
-        }
-
-        .grid::-webkit-scrollbar,
-        .reservationScrollBar::-webkit-scrollbar {
-            width: 0;
-            display: none;
-        }
-
-        .row1 {
-            flex-flow: row nowrap;
-            padding-right: 0px;
-        }
-
-        #temoignages {
-
-            #temoignage-cover {
-                p {
-                    text-align: justify;
-                    width: 80%;
-                    line-height: 25px;
-                    margin: auto;
-                }
-            }
-        }
-
-        #avis {
-            #avis-title {
-                width: 80%;
-                margin: auto;
-
-                p {
-                    text-align: justify;
-                    line-height: 35px;
-                    font-size: 20px;
-                }
-
-            }
-
-            #avis-box {
-                .avis-content-box {
-                    width: 325px;
-                    height: auto;
-                }
-
-            }
-        }
-
-        #rejoindre {
-            #rejoindre-title {
-                width: 80%;
-                margin: auto;
-
-                p {
-                    text-align: justify;
-                    line-height: 35px;
-                    font-size: 20px;
-                }
-            }
-        }
-
-
-
-
-        #reservation-cover {
-            h1 {
-                font-size: 25px;
-            }
+            margin: auto;
 
             p {
-                width: 80%;
+                text-align: justify;
+                line-height: 35px;
+                font-size: 20px;
             }
 
-            height: 50vh;
+        }
+
+        #avis-box {
+            .avis-content-box {
+                width: 325px;
+                height: auto;
+            }
+
+        }
+    }
+
+    #rejoindre {
+        #rejoindre-title {
+            width: 80%;
+            margin: auto;
+
+            p {
+                text-align: justify;
+                line-height: 35px;
+                font-size: 20px;
+            }
+        }
+    }
 
 
 
-            .reservationScrollBar {
-                width: 95%;
+
+    #reservation-cover {
+        h1 {
+            font-size: 25px;
+        }
+
+        p {
+            width: 80%;
+        }
+
+        height: 50vh;
 
 
-                .reservation-content {
-                    width: 1800px;
-                }
 
-                .res-img {
-                    height: 200px;
-                    width: 300px;
-                }
+        .reservationScrollBar {
+            width: 95%;
+
+
+            .reservation-content {
+                width: 1800px;
+            }
+
+            .res-img {
+                height: 200px;
+                width: 300px;
             }
         }
     }
 }
 
 
+
 // responsive formulaire */
 @media screen and (max-width: 800px) {
-#formulaire
- {height: 400px;
-  width: 90%;
-  padding-top: 10px;
-}
+    #formulaire {
+        height: 400px;
+        width: 90%;
+        padding-top: 10px;
+    }
 }

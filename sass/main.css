@@ -18,6 +18,7 @@ body {
   border-color: #fff;
   border-width: 2px;
   border-radius: 0;
+  padding: 10px;
   font-weight: 400;
   text-transform: uppercase;
   border: 2px solid white;
@@ -439,12 +440,16 @@ header nav ul li a {
 }
 
 /* formulaire*/
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
   outline: none;
   box-shadow: inset 0px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
   background-color: #f7f7f7;
   border: none;
   padding: 7px;
@@ -633,7 +638,7 @@ h2 {
 
 .row1 {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   margin: auto;
   gap: 20px;
 }
@@ -824,7 +829,7 @@ h2 {
     background-color: rgb(4, 208, 208);
     width: 80%;
   }
-  #formulaire .grid {
+  .grid {
     overflow: hidden;
     width: 80%;
     overflow: auto;
@@ -833,59 +838,59 @@ h2 {
     padding-right: 100px;
     transition: 0.2s;
   }
-  #formulaire .grid::-webkit-scrollbar,
-  #formulaire .reservationScrollBar::-webkit-scrollbar {
+  .grid::-webkit-scrollbar,
+  .reservationScrollBar::-webkit-scrollbar {
     width: 0;
     display: none;
   }
-  #formulaire .row1 {
+  .row1 {
     flex-flow: row nowrap;
     padding-right: 0px;
   }
-  #formulaire #temoignages #temoignage-cover p {
+  #temoignages #temoignage-cover p {
     text-align: justify;
     width: 80%;
     line-height: 25px;
     margin: auto;
   }
-  #formulaire #avis #avis-title {
+  #avis #avis-title {
     width: 80%;
     margin: auto;
   }
-  #formulaire #avis #avis-title p {
+  #avis #avis-title p {
     text-align: justify;
     line-height: 35px;
     font-size: 20px;
   }
-  #formulaire #avis #avis-box .avis-content-box {
+  #avis #avis-box .avis-content-box {
     width: 325px;
     height: auto;
   }
-  #formulaire #rejoindre #rejoindre-title {
+  #rejoindre #rejoindre-title {
     width: 80%;
     margin: auto;
   }
-  #formulaire #rejoindre #rejoindre-title p {
+  #rejoindre #rejoindre-title p {
     text-align: justify;
     line-height: 35px;
     font-size: 20px;
   }
-  #formulaire #reservation-cover {
+  #reservation-cover {
     height: 50vh;
   }
-  #formulaire #reservation-cover h1 {
+  #reservation-cover h1 {
     font-size: 25px;
   }
-  #formulaire #reservation-cover p {
+  #reservation-cover p {
     width: 80%;
   }
-  #formulaire #reservation-cover .reservationScrollBar {
+  #reservation-cover .reservationScrollBar {
     width: 95%;
   }
-  #formulaire #reservation-cover .reservationScrollBar .reservation-content {
+  #reservation-cover .reservationScrollBar .reservation-content {
     width: 1800px;
   }
-  #formulaire #reservation-cover .reservationScrollBar .res-img {
+  #reservation-cover .reservationScrollBar .res-img {
     height: 200px;
     width: 300px;
   }
