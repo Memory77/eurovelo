@@ -15,9 +15,12 @@
 </head>
 
 <body>
+
     <div id="accueil">
         <div id="vitrine">
-            <header>
+            <img class="menuBurger" src="images/burgerIcones.png" alt="menu Burger">
+
+            <header class="header">
                 <div class="nav-top">
                     <p>Carnet de voyage</p>
                     <p>Espace personnel</p>
@@ -346,6 +349,15 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const menuBurger = document.querySelector(".menuBurger")
+        const header = document.querySelector(".header")
+
+        menuBurger.addEventListener('click', () => {
+            header.classList.toggle('mobile-menu')
+        })
+    </script>
 
     <script src="accueil.js"></script>
     <script src="custom.js"></script>

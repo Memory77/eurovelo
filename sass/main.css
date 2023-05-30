@@ -18,8 +18,6 @@ body {
   border-color: #fff;
   border-width: 2px;
   border-radius: 0;
-  padding: 12px 26px 12px 26px;
-  font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   border: 2px solid white;
@@ -62,6 +60,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.menuBurger {
+  display: none;
 }
 
 header {
@@ -112,13 +114,84 @@ header nav ul li a {
 }
 
 @media screen and (max-width: 1300px) {
-  header .nav-top p, header nav ul li a {
+  header .nav-top p,
+  header nav ul li a {
     font-size: 15px;
   }
 }
 @media screen and (max-width: 800px) {
   header {
     display: none;
+  }
+  header .nav-top {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 75px;
+  }
+  header .nav-top p {
+    padding: 0 15px;
+    font-size: 20px;
+    transition: 0.2s;
+  }
+  header nav {
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    text-decoration: none;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 20px;
+    border-radius: 20px;
+  }
+  header nav img {
+    width: 10%;
+  }
+  header nav ul {
+    display: flex;
+    flex-flow: column;
+    padding-top: 20px;
+    padding: 0 60px;
+    gap: 50px;
+  }
+  header nav ul li {
+    list-style: none;
+    padding: 0 20px;
+    font-weight: bold;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  img.menuBurger {
+    display: block;
+    width: 60px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 3;
+  }
+  .header {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-left: -100%;
+    transition: 0.5s;
+  }
+  .header.mobile-menu {
+    background-color: rgba(27, 26, 26, 0.5529411765);
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    margin-left: 0;
   }
 }
 #footerbottom {
@@ -373,13 +446,15 @@ header nav ul li a {
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 6px;
-  height: 325px;
+  height: 350px;
   text-align: center;
   box-shadow: 10px 5px 5px rgb(96, 84, 84);
 }
 #formulaire select,
 #formulaire input {
   width: 90%;
+  height: 30px;
+  font-size: 12px;
 }
 
 h2 {
@@ -732,7 +807,11 @@ h2 {
   .intro p {
     text-align: justify;
   }
-  .grid {
+  #formulaire {
+    background-color: rgb(4, 208, 208);
+    width: 80%;
+  }
+  #formulaire .grid {
     overflow: hidden;
     width: 80%;
     overflow: auto;
@@ -741,59 +820,59 @@ h2 {
     padding-right: 100px;
     transition: 0.2s;
   }
-  .grid::-webkit-scrollbar,
-  .reservationScrollBar::-webkit-scrollbar {
+  #formulaire .grid::-webkit-scrollbar,
+  #formulaire .reservationScrollBar::-webkit-scrollbar {
     width: 0;
     display: none;
   }
-  .row1 {
+  #formulaire .row1 {
     flex-flow: row nowrap;
     padding-right: 0px;
   }
-  #temoignages #temoignage-cover p {
+  #formulaire #temoignages #temoignage-cover p {
     text-align: justify;
     width: 80%;
     line-height: 25px;
     margin: auto;
   }
-  #avis #avis-title {
+  #formulaire #avis #avis-title {
     width: 80%;
     margin: auto;
   }
-  #avis #avis-title p {
+  #formulaire #avis #avis-title p {
     text-align: justify;
     line-height: 35px;
     font-size: 20px;
   }
-  #avis #avis-box .avis-content-box {
+  #formulaire #avis #avis-box .avis-content-box {
     width: 325px;
     height: auto;
   }
-  #rejoindre #rejoindre-title {
+  #formulaire #rejoindre #rejoindre-title {
     width: 80%;
     margin: auto;
   }
-  #rejoindre #rejoindre-title p {
+  #formulaire #rejoindre #rejoindre-title p {
     text-align: justify;
     line-height: 35px;
     font-size: 20px;
   }
-  #reservation-cover {
+  #formulaire #reservation-cover {
     height: 50vh;
   }
-  #reservation-cover h1 {
+  #formulaire #reservation-cover h1 {
     font-size: 25px;
   }
-  #reservation-cover p {
+  #formulaire #reservation-cover p {
     width: 80%;
   }
-  #reservation-cover .reservationScrollBar {
+  #formulaire #reservation-cover .reservationScrollBar {
     width: 95%;
   }
-  #reservation-cover .reservationScrollBar .reservation-content {
+  #formulaire #reservation-cover .reservationScrollBar .reservation-content {
     width: 1800px;
   }
-  #reservation-cover .reservationScrollBar .res-img {
+  #formulaire #reservation-cover .reservationScrollBar .res-img {
     height: 200px;
     width: 300px;
   }

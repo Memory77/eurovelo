@@ -171,7 +171,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     border-radius: 6px;
-    height: 325px;
+    height: 350px;
     text-align: center;
     box-shadow: 10px 5px 5px rgb(96, 84, 84);
 
@@ -180,6 +180,9 @@
     select,
     input {
         width: 90%;
+        height: 30px;
+        font-size: 12px;
+
 
     }
 }
@@ -682,104 +685,107 @@ h2 {
         }
     }
 
-
-
-    .grid {
-        // display: none;
-        overflow: hidden;
+    #formulaire {
+        background-color: rgb(4, 208, 208);
         width: 80%;
-        overflow: auto;
-        justify-content: left;
-        padding-left: 50px;
-        padding-right: 100px;
-        transition: .2s;
-    }
+        
+        .grid {
+            // display: none;
+            overflow: hidden;
+            width: 80%;
+            overflow: auto;
+            justify-content: left;
+            padding-left: 50px;
+            padding-right: 100px;
+            transition: .2s;
+        }
 
-    .grid::-webkit-scrollbar,
-    .reservationScrollBar::-webkit-scrollbar {
-        width: 0;
-        display: none;
-    }
+        .grid::-webkit-scrollbar,
+        .reservationScrollBar::-webkit-scrollbar {
+            width: 0;
+            display: none;
+        }
 
-    .row1 {
-        flex-flow: row nowrap;
-        padding-right: 0px;
-    }
+        .row1 {
+            flex-flow: row nowrap;
+            padding-right: 0px;
+        }
 
-    #temoignages {
+        #temoignages {
 
-        #temoignage-cover {
-            p {
-                text-align: justify;
+            #temoignage-cover {
+                p {
+                    text-align: justify;
+                    width: 80%;
+                    line-height: 25px;
+                    margin: auto;
+                }
+            }
+        }
+
+        #avis {
+            #avis-title {
                 width: 80%;
-                line-height: 25px;
                 margin: auto;
+
+                p {
+                    text-align: justify;
+                    line-height: 35px;
+                    font-size: 20px;
+                }
+
+            }
+
+            #avis-box {
+                .avis-content-box {
+                    width: 325px;
+                    height: auto;
+                }
+
             }
         }
-    }
 
-    #avis {
-        #avis-title {
-            width: 80%;
-            margin: auto;
+        #rejoindre {
+            #rejoindre-title {
+                width: 80%;
+                margin: auto;
+
+                p {
+                    text-align: justify;
+                    line-height: 35px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+
+
+
+        #reservation-cover {
+            h1 {
+                font-size: 25px;
+            }
 
             p {
-                text-align: justify;
-                line-height: 35px;
-                font-size: 20px;
+                width: 80%;
             }
 
-        }
-
-        #avis-box {
-            .avis-content-box {
-                width: 325px;
-                height: auto;
-            }
-
-        }
-    }
-
-    #rejoindre {
-        #rejoindre-title {
-            width: 80%;
-            margin: auto;
-
-            p {
-                text-align: justify;
-                line-height: 35px;
-                font-size: 20px;
-            }
-        }
-    }
+            height: 50vh;
 
 
 
-
-    #reservation-cover {
-        h1 {
-            font-size: 25px;
-        }
-
-        p {
-            width: 80%;
-        }
-
-        height: 50vh;
+            .reservationScrollBar {
+                width: 95%;
 
 
+                .reservation-content {
+                    width: 1800px;
+                }
 
-        .reservationScrollBar {
-            width: 95%;
-
-
-            .reservation-content {
-                width: 1800px;
-            }
-
-            .res-img {
-                height: 200px;
-                width: 300px;
+                .res-img {
+                    height: 200px;
+                    width: 300px;
+                }
             }
         }
     }

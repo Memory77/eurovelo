@@ -1,3 +1,7 @@
+.menuBurger {
+    display: none;
+}
+
 header {
     width: 100%;
     height: 120px;
@@ -56,14 +60,104 @@ header {
 }
 
 @media screen and (max-width: 1300px) {
-    header .nav-top p,header nav ul li a {
+
+    header .nav-top p,
+    header nav ul li a {
         font-size: 15px;
     }
 }
+
 @media screen and (max-width: 800px) {
-    header { display: none;
-        
+    header {
+        display: none;
+
+        .nav-top {
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-top: 75px;
+
+            p {
+                padding: 0 15px;
+                font-size: 20px;
+                transition: .2s;
+            }
+
+        }
+
+        nav {
+
+            background-color: white;
+            display: flex;
+            flex-flow: column;
+            text-decoration: none;
+            width: 100%;
+            height: 100vh;
+            padding: 50px 20px;
+            border-radius: 20px;
+
+            img {
+                width: 10%;
+            }
+
+            ul {
+                display: flex;
+                flex-flow: column;
+                padding-top: 20px;
+                padding: 0 60px;
+                gap: 50px;
+
+                li {
+                    list-style: none;
+                    padding: 0 20px;
+                    font-weight: bold;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 20px;
+                        font-weight: 400;
+                        font-weight: bold;
+                        transition: .2s;
+                    }
+                }
+            }
+        }
     }
+
+    img.menuBurger {
+        display: block;
+        width: 60px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: 3;
+    }
+
+    .header {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        margin-left: -100%;
+        transition: .5s;
+    }
+
+    .header.mobile-menu {
+        background-color: #1b1a1a8d;
+        // padding: 150px 50px 100vh 100px;
+        position: fixed;
+        display: flex;
+        flex-flow: column;
+        height: 100vh;
+        // justify-content: center;
+        // align-items: center;
+        margin-left: 0;
+    }
+
+
 }
 
 // le header a une box-shadow !!
