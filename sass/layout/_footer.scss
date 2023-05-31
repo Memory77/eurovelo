@@ -112,16 +112,8 @@
                     }
                 }
             }
-#footerbottom
 
         }
-
-
-
-
-
-
-
     }
 
 
@@ -130,7 +122,7 @@
         display: flex;
         flex-flow: column nowrap;
 
-        height: 40vh;
+        height: auto;
         padding-bottom: 50px;
 
         .footer-content {
