@@ -4,6 +4,15 @@
 // import 'leaflet-gpx';
 
 
+// menu burger
+const menuBurger = document.querySelector(".menuBurger")
+const header = document.querySelector(".header")
+
+menuBurger.addEventListener('click', () => {
+  header.classList.toggle('mobile-menu')
+})
+
+
 
 /////////////////////////////////////////// ITINERAIRES
 
