@@ -1,4 +1,3 @@
-# eurovelo
 <br>
 
 <h1>EuroVelo 5 - Haut de France</h1>
