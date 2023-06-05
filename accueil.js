@@ -30,7 +30,7 @@ gpxLayer.addTo(mapAccueil);
 
 ///////////////////////////////// SECTION AVIS 
 
-fetch('http://85.169.220.243:5004/api/commentaires')
+fetch('http://localhost:5004/api/commentaires')
   .then(response => response.json())
   .then(data => {
     const avisData = data.data; // Accéder au tableau de données dans la clé "data"
@@ -58,6 +58,7 @@ fetch('http://85.169.220.243:5004/api/commentaires')
       const security = avis.attributes.security;
       const balisage = avis.attributes.balisage;
       const interet = avis.attributes.interet;
+      const service = avis.attributes.service;
       const titre = avis.attributes.titre;
       const description = avis.attributes.description;
 
@@ -69,10 +70,10 @@ fetch('http://85.169.220.243:5004/api/commentaires')
           <p class="name">${name}</p>
           <p class="provenance">${ville}</p>
           <div class="notes">
-            <p>${security}/5</p>
-            <p>${balisage}/5</p>
-            <p>${interet}/5</p>
-            <p>${security}/5</p>
+            <p>Sécurité : ${security}/5</p>
+            <p>Balisage : ${balisage}/5</p>
+            <p>Interet : ${interet}/5</p>
+            <p>Service : ${service}/5</p>
           </div>
           <div class="commentaire">
             <h2>${titre}</h2>

@@ -64,7 +64,7 @@ function loadGPX(url, map) {
     });
 }
 
-fetch('http://85.169.220.243:5004/api/itineraires')
+fetch('http://localhost:5004/api/itineraires')
   .then(response => response.json())
   .then(data => {
     const itiData = data.data; // Accéder au tableau de données dans la clé "data"
