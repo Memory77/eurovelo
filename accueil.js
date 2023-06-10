@@ -61,10 +61,12 @@ fetch('http://localhost:5004/api/commentaires')
       const service = avis.attributes.service;
       const titre = avis.attributes.titre;
       const description = avis.attributes.description;
+      const url = `avis.html?id=${id}`;
 
       // utilisation des variables pour construire l'html
 
       return `
+      <a href="${url}">
         <div class="avis-content-box">
           <p class="date">${date}</p>
           <p class="name">${name}</p>
@@ -80,6 +82,7 @@ fetch('http://localhost:5004/api/commentaires')
             <p>${description}</p>
           </div>
         </div>
+      </a>
       `;
     });
 
@@ -89,5 +92,8 @@ fetch('http://localhost:5004/api/commentaires')
   .catch(error => {
     console.error(error);
   });
+
+
+
   
 

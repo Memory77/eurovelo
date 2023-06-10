@@ -558,6 +558,7 @@ h2 {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 10px 5px 5px rgb(144, 134, 134);
+  color: black;
 }
 #avis #avis-box .avis-content-box .name {
   font-weight: bold;
@@ -1102,6 +1103,22 @@ h2 {
     z-index: -1;
   }
 }
+#avis-single {
+  background-image: url("../../images/49594770503_4a4aff685d_k.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+#avis-single #avis #avis-title {
+  margin-top: 0;
+}
+#avis-single #avis #avis-title p {
+  font-weight: bold;
+}
+
 /*
 Flaticon icon font: Flaticon
 */
